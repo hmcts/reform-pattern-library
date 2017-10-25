@@ -1,0 +1,11 @@
+{
+  "env": {
+    "jquery": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-console": ["error", { allow: ["warn", "error"] }]
+  }
+}

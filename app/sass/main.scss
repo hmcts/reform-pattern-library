@@ -1,0 +1,16 @@
+// Asset path
+$path: "/public/images/";
+
+
+// Import Gov Elements
+@import "govuk-elements";
+
+
+// Import Ministry of Justice
+@import "settings/manifest";
+@import "tools/manifest";
+@import "generic/manifest";
+@import "elements/manifest";
+@import "objects/manifest";
+@import "components/manifest";
+@import "trumps/manifest";

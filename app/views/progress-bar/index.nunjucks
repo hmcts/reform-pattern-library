@@ -1,0 +1,60 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+
+  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+
+
+  <div class="grid-row">
+
+
+    <div class="column-two-thirds">
+
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+
+      <div class="progress" aria-label="Appeal process">
+
+        <ol class="progress-list">
+
+          <li class="progress-item progress-item-complete">
+            <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+            <span class="progress-label">Appeal</span>
+          </li>
+
+          <li class="progress-item">
+            <i class="progress-icon"></i>
+            <span class="progress-label">DWP response</span>
+          </li>
+
+          <li class="progress-item">
+            <i class="progress-icon"></i>
+            <span class="progress-label">Hearing booked</span>
+          </li>
+
+          <li class="progress-item">
+            <i class="progress-icon"></i>
+            <span class="progress-label">Hearing</span>
+          </li>
+
+        </ol>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</main>
+{% endblock %}

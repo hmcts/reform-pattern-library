@@ -1,0 +1,19 @@
+{% if section or pageTitle %}
+<div class="breadcrumbs">
+
+  <ol>
+
+    <li><a href="/">Reform Pattern Library</a></li>
+
+    {% if section %}
+    <li><a href="/{{ section }}/">{% if sectionName %} {{ sectionName }} {% endif %}</a></li>
+    {% endif %}
+
+    {% if pageTitle %}
+    <li aria-current="page">{{ pageTitle }}</li>
+    {% endif %}
+
+  </ol>
+
+</div>
+{% endif %}

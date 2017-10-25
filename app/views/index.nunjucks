@@ -1,0 +1,38 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <p class="lede">A collection of patterns for the Reform Programme.</p>
+
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-one-third">
+      <h2 class="heading-medium"><a href="/address-lookup">Address lookup</a></h2>
+      <p>An address lookup pattern allowing the selection of an address from a postcode.</p>
+    </div>
+
+    <div class="column-one-third">
+      <h2 class="heading-medium"><a href="/progress-bar">Progress bar</a></h2>
+      <p>A progress bar to illustrate the user journey in a the service flow.</p>
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

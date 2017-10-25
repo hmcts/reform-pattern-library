@@ -1,0 +1,25 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "stylesheets.nunjucks" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+{% endblock %}
+
+{% block proposition_header %}
+  {% include "proposition.nunjucks" %}
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block footer_support_links %}
+  {% include "support_links.nunjucks" %}
+{% endblock %}
+
+{% block body_end %}
+  {% include "scripts.nunjucks" %}
+{% endblock %}

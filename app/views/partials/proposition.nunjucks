@@ -1,0 +1,14 @@
+<div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <div id="proposition-menu">
+      <a href="/" id="proposition-name">{{service_title}}</a>
+      <!--ul id="proposition-links">
+        <li><a href="/">Link 1</a></li>
+        <li><a href="/">Link 2</a></li>
+        <li><a href="/">Link 3</a></li>
+        <li><a href="/">Link 4</a></li>
+      </ul-->
+    </div>
+  </div>
+</div>
