@@ -45,14 +45,7 @@
           </div>
 
 
-          <div class="hidden" id="postcode-addresses">
-
-            <div class="form-group">
-              <label class="form-label-bold" for="postcode-select">Select an address</label>
-              <select class="form-control form-control-3-4" id="postcode-select" name="postcodeSelect" aria-live="assertive"></select>
-            </div>
-
-          </div>
+          <div class="hidden" id="postcode-addresses" aria-live="assertive"></div>
 
 
           <div class="hidden" id="manual-address" role="status" aria-live="polite">
