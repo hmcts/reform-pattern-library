@@ -6,13 +6,17 @@ $module: "collapsible";
 
 .#{$module} {
   border-bottom: 1px solid $border-colour;
-  padding-left: em(24);
 
   &-summary {
-    text-indent: - em(20);
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 0;
     padding-top: em(15);
     padding-bottom: em(15);
+    padding-left: em(20);
+    user-select: none;
+    text-indent: - em(20);
   }
 
 }
