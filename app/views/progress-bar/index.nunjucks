@@ -12,46 +12,151 @@
   {% include "partials/breadcrumb.nunjucks" ignore missing %}
 
 
-  <div class="grid-row">
+  <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+  <p class="lede">A progress bar to illustrate the user journey in a service flow.</p>
 
 
-    <div class="column-two-thirds">
+  <!-- example -->
+  <h2 class="heading-medium">Appeal</h2>
 
+  <div class="example" data-title="Example">
 
-      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+    <div class="progress" aria-label="Appeal process">
 
+      <ol class="progress-list">
 
-      <div class="progress" aria-label="Appeal process">
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Appeal</span>
+        </li>
 
-        <ol class="progress-list">
+        <li class="progress-item">
+          <i class="progress-icon"></i>
+          <span class="progress-label">DWP response</span>
+        </li>
 
-          <li class="progress-item progress-item-complete">
-            <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-            <span class="progress-label">Appeal</span>
-          </li>
+        <li class="progress-item">
+          <i class="progress-icon"></i>
+          <span class="progress-label">Hearing booked</span>
+        </li>
 
-          <li class="progress-item">
-            <i class="progress-icon"></i>
-            <span class="progress-label">DWP response</span>
-          </li>
+        <li class="progress-item">
+          <i class="progress-icon"></i>
+          <span class="progress-label">Hearing</span>
+        </li>
 
-          <li class="progress-item">
-            <i class="progress-icon"></i>
-            <span class="progress-label">Hearing booked</span>
-          </li>
-
-          <li class="progress-item">
-            <i class="progress-icon"></i>
-            <span class="progress-label">Hearing</span>
-          </li>
-
-        </ol>
-
-      </div>
-
+      </ol>
 
     </div>
 
+  </div>
+
+
+  <!-- example -->
+  <h2 class="heading-medium">DWP response</h2>
+
+  <div class="example" data-title="Example">
+
+    <div class="progress" aria-label="Appeal process">
+
+      <ol class="progress-list">
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Appeal</span>
+        </li>
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">DWP response</span>
+        </li>
+
+        <li class="progress-item">
+          <i class="progress-icon"></i>
+          <span class="progress-label">Hearing booked</span>
+        </li>
+
+        <li class="progress-item">
+          <i class="progress-icon"></i>
+          <span class="progress-label">Hearing</span>
+        </li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+
+  <!-- example -->
+  <h2 class="heading-medium">Hearing booked</h2>
+
+  <div class="example" data-title="Example">
+
+    <div class="progress" aria-label="Appeal process">
+
+      <ol class="progress-list">
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Appeal</span>
+        </li>
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">DWP response</span>
+        </li>
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Hearing booked</span>
+        </li>
+
+        <li class="progress-item">
+          <i class="progress-icon"></i>
+          <span class="progress-label">Hearing</span>
+        </li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+
+  <!-- example -->
+  <h2 class="heading-medium">Hearing</h2>
+
+  <div class="example" data-title="Example">
+
+    <div class="progress" aria-label="Appeal process">
+
+      <ol class="progress-list">
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Appeal</span>
+        </li>
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">DWP response</span>
+        </li>
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Hearing booked</span>
+        </li>
+
+        <li class="progress-item progress-item-complete">
+          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
+          <span class="progress-label">Hearing</span>
+        </li>
+
+      </ol>
+
+    </div>
 
   </div>
 

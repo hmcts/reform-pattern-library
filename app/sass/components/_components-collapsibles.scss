@@ -1,0 +1,18 @@
+/*
+Collapsible
+*/
+
+$module: "collapsible";
+
+.#{$module} {
+  border-bottom: 1px solid $border-colour;
+  padding-left: em(24);
+
+  &-summary {
+    text-indent: - em(20);
+    margin-bottom: 0;
+    padding-top: em(15);
+    padding-bottom: em(15);
+  }
+
+}

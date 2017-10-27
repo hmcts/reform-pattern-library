@@ -29,7 +29,12 @@
 
     <div class="column-one-third">
       <h2 class="heading-medium"><a href="/progress-bar">Progress bar</a></h2>
-      <p>A progress bar to illustrate the user journey in a the service flow.</p>
+      <p>A progress bar to illustrate the user journey in a service flow.</p>
+    </div>
+
+    <div class="column-one-third">
+      <h2 class="heading-medium"><a href="/collapsibles">Collapsibles</a></h2>
+      <p>Use this to make your page easier to scan, only showing contextual information when required. </p>
     </div>
 
   </div>

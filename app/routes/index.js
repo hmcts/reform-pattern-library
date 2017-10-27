@@ -28,6 +28,15 @@ module.exports = {
       )
     })
 
+    // collapsibles
+    app.get('/collapsibles', function (req, res) {
+      res.render('collapsibles/index',
+        data = {
+          pageTitle : 'Example: Collapsibles'
+        }
+      )
+    })
+
   }
 
 }

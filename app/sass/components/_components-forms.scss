@@ -4,10 +4,10 @@ Forms
 
 $module: "form";
 
-
 .#{$module} {
 
-  // Postcode
+
+  // postcode
   &-postcode {
 
     .#{$module}-control {
@@ -22,5 +22,6 @@ $module: "form";
     }
 
   }
+
 
 }

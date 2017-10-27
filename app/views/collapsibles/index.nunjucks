@@ -1,0 +1,48 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+
+  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+
+
+  <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+  <p class="lede">Use this to make your page easier to scan, only showing contextual information when required.</p>
+
+
+  <div class="example" data-title="Example">
+
+    <details class="collapsible">
+
+      <summary class="collapsible-summary"><span class="summary">I want to search for my husband/wife&rsquo;s address on UK government databases (&pound;50)</span></summary>
+
+      <div class="panel panel-border-narrow">
+        <p>You can apply for a search of government databases (for example, the electoral role) for your husband/wife&rsquo;s address.</p>
+        <p><b>How to apply:</b> Contact the court for the form and pay a fee of &pound;50.</p>
+      </div>
+
+    </details>
+
+    <details class="collapsible">
+
+      <summary class="collapsible-summary"><span class="summary">I need to send the application to an electronic address, for example my husband/wife&rsquo;s email (&pound;50)</span></summary>
+
+      <div class="panel panel-border-narrow">
+        <p>You can ask for the application to be delivered electronically, for example: Email, Facebook messenger, Whatsapp.</p>
+        <p><b>How to apply:</b> Fill in <a href="#" target="_blank">form D11</a> and print it, then send it to the court with a fee of &pound;50.</p>
+      </div>
+
+    </details>
+
+  </div>
+
+
+</main>
+{% endblock %}
