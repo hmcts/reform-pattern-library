@@ -1,0 +1,15 @@
+{#
+  phase_banner
+    phase    - (required) The phase is ALPHA or BETA
+    url      - (default = #) A url for the feedback link
+  Renders a a phase banner
+#}
+
+{% macro phase_banner(phase, url="#") %}
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">{{ phase }}</strong>
+      <span>This is a new service &ndash; your <a href="{{ url }}">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+{% endmacro %}

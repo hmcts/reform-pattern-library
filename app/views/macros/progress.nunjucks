@@ -1,0 +1,14 @@
+{#
+  progress_item
+    complete - (default = false) A visual complete status
+    current  - Where you are in the progress
+    label    - (required) The label for the progress state
+  Renders a single progress item
+#}
+
+{% macro progress_item(label, complete=false, current=false) %}
+  <li class="progress-item{% if complete %} progress-item-complete{% endif %}{% if current %} progress-item-current{% endif %}">
+    <i class="progress-icon">{% if complete %}<span class="visually-hidden">Complete</span>{% endif %}</i>
+    <span class="progress-label">{{ label }}</span>
+  </li>
+{% endmacro %}

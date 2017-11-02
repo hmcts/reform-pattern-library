@@ -1,0 +1,37 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+{% from 'macros/phase.nunjucks' import phase_banner %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+
+  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+
+
+  <h1 class="heading-xlarge">{{pageTitle}}</h1>
+  <p>Used as an indication of the state of a project.</p>
+
+
+  <!-- example -->
+  <h2 class="heading-medium">Alpha banner</h2>
+
+  <div class="example" data-title="Example">
+    {{ phase_banner("ALPHA") }}
+  </div>
+
+
+  <!-- example -->
+  <h2 class="heading-medium">Beta banner</h2>
+
+  <div class="example" data-title="Example">
+    {{ phase_banner("BETA") }}
+  </div>
+
+
+</main>
+{% endblock %}

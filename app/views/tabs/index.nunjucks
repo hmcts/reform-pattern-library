@@ -4,7 +4,7 @@
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
 {% block content %}
-<main id="content" role="main">
+<main class="pattern-library" id="content" role="main">
 
 
   {% include "partials/phase_banner.nunjucks" ignore missing %}
@@ -13,8 +13,7 @@
 
 
   <h1 class="heading-xlarge">{{pageTitle}}</h1>
-
-  <p class="lede">Optimise screen area without sacrificing the amount of content.</p>
+  <p>Optimise screen area without sacrificing the amount of content.</p>
 
 
   <div class="example" data-title="Example">

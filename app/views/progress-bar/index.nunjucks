@@ -1,10 +1,11 @@
 {% set title = pageTitle %}
 {% extends "layout.nunjucks" %}
+{% from 'macros/progress.nunjucks' import progress_item %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
 {% block content %}
-<main id="content" role="main">
+<main class="pattern-library" id="content" role="main">
 
 
   {% include "partials/phase_banner.nunjucks" ignore missing %}
@@ -13,39 +14,19 @@
 
 
   <h1 class="heading-xlarge">{{pageTitle}}</h1>
-
-  <p class="lede">A progress bar to illustrate the user journey in a service flow.</p>
+  <p>A progress bar to illustrate the user journey in a service flow.</p>
 
 
   <!-- example -->
-  <h2 class="heading-medium">Appeal</h2>
-
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
 
       <ol class="progress-list">
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Appeal</span>
-        </li>
-
-        <li class="progress-item">
-          <i class="progress-icon"></i>
-          <span class="progress-label">DWP response</span>
-        </li>
-
-        <li class="progress-item">
-          <i class="progress-icon"></i>
-          <span class="progress-label">Hearing booked</span>
-        </li>
-
-        <li class="progress-item">
-          <i class="progress-icon"></i>
-          <span class="progress-label">Hearing</span>
-        </li>
-
+        {{ progress_item("Appeal", "Complete") }}
+        {{ progress_item("DWP response", "", "Current") }}
+        {{ progress_item("Hearing booked") }}
+        {{ progress_item("Hearing") }}
       </ol>
 
     </div>
@@ -59,27 +40,10 @@
     <div class="progress" aria-label="Appeal process">
 
       <ol class="progress-list">
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Appeal</span>
-        </li>
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">DWP response</span>
-        </li>
-
-        <li class="progress-item">
-          <i class="progress-icon"></i>
-          <span class="progress-label">Hearing booked</span>
-        </li>
-
-        <li class="progress-item">
-          <i class="progress-icon"></i>
-          <span class="progress-label">Hearing</span>
-        </li>
-
+        {{ progress_item("Appeal", "Complete") }}
+        {{ progress_item("DWP response", "Complete") }}
+        {{ progress_item("Hearing booked", "", "Current") }}
+        {{ progress_item("Hearing") }}
       </ol>
 
     </div>
@@ -93,27 +57,10 @@
     <div class="progress" aria-label="Appeal process">
 
       <ol class="progress-list">
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Appeal</span>
-        </li>
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">DWP response</span>
-        </li>
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Hearing booked</span>
-        </li>
-
-        <li class="progress-item">
-          <i class="progress-icon"></i>
-          <span class="progress-label">Hearing</span>
-        </li>
-
+        {{ progress_item("Appeal", "Complete") }}
+        {{ progress_item("DWP response", "Complete") }}
+        {{ progress_item("Hearing booked", "Complete") }}
+        {{ progress_item("Hearing", "", "Current") }}
       </ol>
 
     </div>
@@ -127,27 +74,10 @@
     <div class="progress" aria-label="Appeal process">
 
       <ol class="progress-list">
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Appeal</span>
-        </li>
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">DWP response</span>
-        </li>
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Hearing booked</span>
-        </li>
-
-        <li class="progress-item progress-item-complete">
-          <i class="progress-icon"><span class="visually-hidden">Complete</span></i>
-          <span class="progress-label">Hearing</span>
-        </li>
-
+        {{ progress_item("Appeal", "Complete") }}
+        {{ progress_item("DWP response", "Complete") }}
+        {{ progress_item("Hearing booked", "Complete") }}
+        {{ progress_item("Hearing", "Complete") }}
       </ol>
 
     </div>

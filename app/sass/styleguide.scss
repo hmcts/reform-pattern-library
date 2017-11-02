@@ -2,31 +2,43 @@
 @import "frontend-toolkit";
 
 /*
-Example
+Pattern library
 */
 
-$module: "example";
+$module: "pattern-library";
 
 .#{$module} {
-  @extend %contain-floats;
-  border: 1px solid $border-colour;
-  position: relative;
-  margin: em(15) 0;
-  overflow: hidden;
-  padding: em(40) em(15) em(15);
 
-  @include media(tablet) {
-    padding: em(55) em(30) em(30);
+  .example {
+
+    @extend %contain-floats;
+    border: 1px solid $border-colour;
+    position: relative;
+    margin: em(30) 0;
+    overflow: hidden;
+    padding: em(40) em(15) em(15);
+
+    @include media(tablet) {
+      padding: em(55) em(30) em(30);
+    }
+
+    &::before {
+      @include core-14;
+      background-color: $grey-2;
+      color: $white;
+      content: attr(data-title);
+      padding: em(4) em(15) em(4) em(15);
+      position: absolute; top: 0; left: 0;
+      text-transform: uppercase;
+    }
+
   }
 
-  &::before {
-    @include core-14;
-    background-color: $grey-2;
-    color: $white;
-    content: attr(data-title);
-    padding: em(4) em(15) em(4) em(15);
-    position: absolute; top: 0; left: 0;
-    text-transform: uppercase;
+
+  .heading-index {
+    margin-top: 1em;
+    margin-bottom: 0;
   }
+
 
 }

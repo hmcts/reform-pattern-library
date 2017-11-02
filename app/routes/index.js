@@ -46,6 +46,15 @@ module.exports = {
       )
     })
 
+    // alpha / beta phase banners
+    app.get('/alpha-beta-banners', function (req, res) {
+      res.render('alpha-beta-banners/index',
+        data = {
+          pageTitle : 'Example: Alpha and beta banners'
+        }
+      )
+    })
+
   }
 
 }

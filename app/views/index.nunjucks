@@ -4,7 +4,7 @@
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
 {% block content %}
-<main id="content" role="main">
+<main class="pattern-library" id="content" role="main">
 
   {% include "partials/phase_banner.nunjucks" ignore missing %}
 
@@ -23,18 +23,18 @@
   <div class="grid-row">
 
     <div class="column-one-third">
-      <h2 class="heading-medium"><a href="/address-lookup">Address lookup</a></h2>
-      <p>An address lookup pattern allowing the selection of an address from a postcode.</p>
+      <h2 class="heading-medium heading-index"><a href="/address-lookup">Address lookup</a></h2>
+      <p>Find a collection of addresses using a postcode.</p>
     </div>
 
     <div class="column-one-third">
-      <h2 class="heading-medium"><a href="/progress-bar">Progress bar</a></h2>
-      <p>A progress bar to illustrate the user journey in a service flow.</p>
+      <h2 class="heading-medium heading-index"><a href="/progress-bar">Progress bar</a></h2>
+      <p>Show user progression in a service flow.</p>
     </div>
 
     <div class="column-one-third">
-      <h2 class="heading-medium"><a href="/collapsibles">Collapsibles</a></h2>
-      <p>Use this to make your page easier to scan, only showing contextual information when required. </p>
+      <h2 class="heading-medium heading-index"><a href="/collapsibles">Collapsibles</a></h2>
+      <p>Show contextual information when required.</p>
     </div>
 
   </div>
@@ -42,8 +42,13 @@
   <div class="grid-row">
 
     <div class="column-one-third">
-      <h2 class="heading-medium"><a href="/tabs">Tabs</a></h2>
-      <p>Optimise screen area without sacrificing the amount of content.</p>
+      <h2 class="heading-medium heading-index"><a href="/tabs">Tabs</a></h2>
+      <p>Optimise screen space without sacrificing content.</p>
+    </div>
+
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/alpha-beta-banners">Alpha and beta banners</a></h2>
+      <p>Used as an indication of the state of a project.</p>
     </div>
 
   </div>

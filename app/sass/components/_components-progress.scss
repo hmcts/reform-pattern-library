@@ -82,6 +82,10 @@ $module: "progress";
 
       }
 
+    }
+
+    &-current {
+
       .#{$module}-label {
         font-weight: bold;
       }
