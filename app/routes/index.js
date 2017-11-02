@@ -37,6 +37,15 @@ module.exports = {
       )
     })
 
+    // tabs
+    app.get('/tabs', function (req, res) {
+      res.render('tabs/index',
+        data = {
+          pageTitle : 'Example: Tabs'
+        }
+      )
+    })
+
   }
 
 }

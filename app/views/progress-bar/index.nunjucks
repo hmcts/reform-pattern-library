@@ -54,8 +54,6 @@
 
 
   <!-- example -->
-  <h2 class="heading-medium">DWP response</h2>
-
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -90,8 +88,6 @@
 
 
   <!-- example -->
-  <h2 class="heading-medium">Hearing booked</h2>
-
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -126,8 +122,6 @@
 
 
   <!-- example -->
-  <h2 class="heading-medium">Hearing</h2>
-
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">

@@ -9,5 +9,6 @@
 <script src="/public/javascripts/govuk/details.polyfill.js"></script>
 <script src="/public/javascripts/application.js"></script>
 
-<!-- ministry of justice scripts -->
-<script src="/public/javascripts/main.js"></script>
+<!-- reform js -->
+<script src="/public/javascripts/reform/postcode-lookup.js"></script>
+<script src="/public/javascripts/reform/accessible-tabs.js"></script>

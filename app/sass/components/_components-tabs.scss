@@ -2,9 +2,83 @@
 Tabs
 */
 
+
 $module: "tabs";
 
 .#{$module} {
 
+  // global treatment
+  &-toggle {
+    display: block;
+    padding: 10px 15px;
+
+    &[aria-selected=true] {
+      color: $text-colour;
+      text-decoration: none;
+    }
+
+  }
+
+  // mobile
+  @include media (mobile) {
+
+    &-list {
+      border-bottom: 1px solid $border-colour;
+      margin-left: - 15px;
+      margin-right: - 15px;
+    }
+
+    &-toggle {
+      border-top: 1px solid $border-colour;
+
+      &:focus {
+        color: $text-colour;
+        outline: none;
+      }
+
+    }
+
+  }
+
+  // tablet and above
+  @include media(tablet) {
+
+    &-panel {
+      border-top: 1px solid $border-colour;
+      clear: both;
+      overflow: hidden;
+    }
+
+    &-list {
+      float: left;
+
+      &-item {
+        float: left;
+        position: relative; bottom: -1px;
+      }
+
+    }
+
+    &-toggle {
+      background-color: $grey-3;
+      border: 1px solid transparent;
+      float: left;
+      margin: 6px 6px 6px 0;
+      text-decoration: none;
+
+      &-selected,
+      &[aria-selected=true] {
+        background-color: $white;
+        border-bottom: 0;
+        border-color: $grey-2;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 16px;
+        padding-bottom: 17px;
+      }
+
+    }
+
+  }
 
 }

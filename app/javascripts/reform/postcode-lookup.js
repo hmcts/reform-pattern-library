@@ -172,6 +172,6 @@ function postcodeLookup () {
 }
 
 
-window.onload = function () {
+window.addEventListener("load", function() {
   postcodeLookup();
-};
+});

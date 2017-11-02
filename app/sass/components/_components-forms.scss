@@ -6,8 +6,6 @@ $module: "form";
 
 .#{$module} {
 
-
-  // postcode
   &-postcode {
 
     .#{$module}-control {
@@ -22,6 +20,5 @@ $module: "form";
     }
 
   }
-
 
 }

@@ -39,5 +39,14 @@
 
   </div>
 
+  <div class="grid-row">
+
+    <div class="column-one-third">
+      <h2 class="heading-medium"><a href="/tabs">Tabs</a></h2>
+      <p>Optimise screen area without sacrificing the amount of content.</p>
+    </div>
+
+  </div>
+
 </main>
 {% endblock %}
