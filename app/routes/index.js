@@ -55,6 +55,15 @@ module.exports = {
       )
     })
 
+    // add form items
+    app.get('/add-form-items', function (req, res) {
+      res.render('add-form-items/index',
+        data = {
+          pageTitle : 'Example: Add form items'
+        }
+      )
+    })
+
   }
 
 }

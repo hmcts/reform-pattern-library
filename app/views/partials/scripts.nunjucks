@@ -12,3 +12,4 @@
 <!-- reform js -->
 <script src="/public/javascripts/reform/postcode-lookup.js"></script>
 <script src="/public/javascripts/reform/accessible-tabs.js"></script>
+<script src="/public/javascripts/reform/add-form-items.js"></script>
