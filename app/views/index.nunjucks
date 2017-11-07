@@ -51,6 +51,11 @@
       <p>Used as an indication of the state of a project.</p>
     </div>
 
+    <!--div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/alpha-beta-banners">Pagination</a></h2>
+      <p>...</p>
+    </div-->
+
   </div>
 
   <hr>

@@ -37,14 +37,16 @@
 
           <label class="form-label-bold" for="postcode-lookup">Enter a UK postcode</label>
 
-          <div class="form-postcode" data-js="postcode">
+          <div class="form-postcode">
             <input class="form-control form-control-1-4" id="postcode-lookup" type="text"><button class="button" id="postcode-button" type="submit">Find address</button>
           </div>
 
         </div>
 
 
-        <div class="hidden" id="postcode-addresses" aria-live="assertive"></div>
+        <div class="hidden" id="postcode-addresses" aria-live="assertive">
+
+        </div>
 
 
         <div class="hidden" id="manual-address" role="status" aria-live="polite">
