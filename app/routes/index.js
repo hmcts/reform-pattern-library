@@ -2,6 +2,7 @@ module.exports = {
 
   bind: function(app) {
 
+    // index
     app.get('/', function (req, res) {
       res.render('index',
         data = {
@@ -9,6 +10,43 @@ module.exports = {
         }
       )
     })
+
+    // elements
+    app.get('/elements', function (req, res) {
+      res.render('elements/index',
+        data = {
+          pageTitle : 'Elements'
+        }
+      )
+    })
+
+    // components
+    app.get('/components', function (req, res) {
+      res.render('components/index',
+        data = {
+          pageTitle : 'Components'
+        }
+      )
+    })
+
+    // layouts
+    app.get('/layouts', function (req, res) {
+      res.render('layouts/index',
+        data = {
+          pageTitle : 'Layouts'
+        }
+      )
+    })
+
+    // layouts
+    app.get('/journeys', function (req, res) {
+      res.render('journeys/index',
+        data = {
+          pageTitle : 'Journeys'
+        }
+      )
+    })
+
 
     // address lookup
     app.get('/address-lookup', function (req, res) {
