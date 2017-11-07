@@ -70,7 +70,7 @@ app.locals = locals
 
 
 // Routes
-routes.bind(app, '/public/')
+app.use('/', routes);
 
 
 // Start app and listen
