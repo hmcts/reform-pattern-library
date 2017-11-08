@@ -1,0 +1,46 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+{% from "macros/phase.njk" import phase_banner %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">For documentation, please go to <a href="https://govuk-elements.herokuapp.com/alpha-beta-banners" target="_blank">GOV Elements<span class="visually-hidden"> (opens in a new window)</span></a>.</p>
+
+    </div>
+
+  </div>
+
+  <!-- alpha beta banners-->
+  <h2 class="heading-medium">Alpha banner</h2>
+
+  <div class="example" data-title="Example">
+    {{ phase_banner("ALPHA") }}
+  </div>
+
+  <pre><code class="prettyprint">{% raw %}{{ phase_banner("ALPHA") }}{% endraw %}</code></pre>
+
+
+  <h2 class="heading-medium">Beta banner</h2>
+
+  <div class="example" data-title="Example">
+    {{ phase_banner("BETA") }}
+  </div>
+
+  <pre><code class="prettyprint">{% raw %}{{ phase_banner("BETA") }}{% endraw %}</code></pre>
+  <!-- end -->
+
+</main>
+{% endblock %}

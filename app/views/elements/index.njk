@@ -1,7 +1,4 @@
-{% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/phase.njk" import phase_banner %}
-{% from "macros/button.njk" import button %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -18,20 +15,25 @@
 
       <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
 
-      <h2 class="heading-small">Contents:</h2>
-
-      <ul class="list">
-        <li><a href="#alpha-beta-banners">Alpha and beta banners</a></li>
-        <li><a href="#buttons">Buttons</a></li>
-      </ul>
+      <p class="lede">A collection of components for the Reform Programme.</p>
 
     </div>
 
   </div>
 
-  {% include "elements/alpha-beta-banners.njk" ignore missing %}
+  <div class="grid-row">
 
-  {% include "elements/buttons.njk" ignore missing %}
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/elements/alpha-beta-banners">Alpha and beta banners</a></h2>
+      <p>Some content...</p>
+    </div>
+
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/elements/buttons">Buttons</a></h2>
+      <p>Some content...</p>
+    </div>
+
+  </div>
 
 </main>
 {% endblock %}

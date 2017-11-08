@@ -1,0 +1,55 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+{% from "macros/button.njk" import button %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">For documentation, please go to <a href="https://govuk-elements.herokuapp.com/buttons" target="_blank">GOV Elements<span class="visually-hidden"> (opens in a new window)</span></a>.</p>
+
+    </div>
+
+  </div>
+
+  <!-- alpha and beta banners -->
+  <h2 class="heading-medium">Primary button</h2>
+
+  <div class="example" data-title="Example">
+    {{ button("Primary button") }}
+  </div>
+
+  <pre><code class="prettyprint">{% raw %}{{ button("Primary button") }}{% endraw %}</code></pre>
+
+
+  <h2 class="heading-medium">Secondary button</h2>
+
+  <div class="example" data-title="Example">
+    {{ button("Secondary button", "secondary") }}
+  </div>
+
+  <pre><code class="prettyprint">{% raw %}{{ button("Secondary button", "secondary") }}{% endraw %}</code></pre>
+
+
+  <h2 class="heading-medium">Tertiary button</h2>
+
+  <div class="example" data-title="Example">
+    {{ button("Tertiary button", "tertiary") }}
+  </div>
+
+  <pre><code class="prettyprint">{% raw %}{{ button("Tertiary button", "tertiary") }}{% endraw %}</code></pre>
+  <!-- end -->
+
+</main>
+{% endblock %}

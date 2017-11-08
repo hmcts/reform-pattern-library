@@ -1,10 +1,29 @@
-<!-- progress bar -->
-<div id="progress-bar">
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+{% from "macros/progress.njk" import progress_item %}
 
-  <h2 class="heading-large">Progress Bar</h2>
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
-  <p>A progress bar to illustrate the user journey in a service flow.</p>
+{% block content %}
+<main class="pattern-library" id="content" role="main">
 
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">A progress bar to illustrate the user journey in a service flow.</p>
+
+    </div>
+
+  </div>
+
+  <!-- progress bar -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -64,5 +83,7 @@
     </div>
 
   </div>
+  <!-- end -->
 
-</div>
+</main>
+{% endblock %}

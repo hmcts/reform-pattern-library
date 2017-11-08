@@ -1,10 +1,28 @@
-<!-- collapsibles -->
-<div id="collapsibles">
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
 
-  <h2 class="heading-large">Collapsibles</h2>
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
-  <p>Make pages easier to scan, only showing contextual information when required.</p>
+{% block content %}
+<main class="pattern-library" id="content" role="main">
 
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">Make pages easier to scan, only showing contextual information when required.</p>
+
+    </div>
+
+  </div>
+
+  <!-- collapsibles -->
   <div class="example" data-title="Example">
 
     <p>Choose from the following questions:</p>
@@ -65,5 +83,7 @@
     </details>
 
   </div>
+  <!-- end -->
 
-</div>
+</main>
+{% endblock %}

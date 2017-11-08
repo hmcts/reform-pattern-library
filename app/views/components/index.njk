@@ -1,6 +1,5 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/progress.njk" import progress_item %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -17,29 +16,44 @@
 
       <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
 
-      <h2 class="heading-small">Contents:</h2>
-
-      <ul class="list">
-        <li><a href="#address-lookup">Address lookup</a></li>
-        <li><a href="#progress-bar">Progress Bar</a></li>
-        <li><a href="#collapsibles">Collaspsibles</a></li>
-        <li><a href="#tabs">Tabs</a></li>
-        <li><a href="#add-form-items">Add form items</a></li>
-      </ul>
+      <p class="lede">A collection of components for the Reform Programme.</p>
 
     </div>
 
   </div>
 
-  {% include "components/address-lookup.njk" ignore missing %}
+  <div class="grid-row">
 
-  {% include "components/progress-bar.njk" ignore missing %}
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/components/address-lookup">Address lookup</a></h2>
+      <p>An address lookup pattern allowing the selection of an address from a postcode.</p>
+    </div>
 
-  {% include "components/collapsibles.njk" ignore missing %}
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/components/collapsibles">Collapsibles</a></h2>
+      <p>Make pages easier to scan, only showing contextual information when required.</p>
+    </div>
 
-  {% include "components/tabs.njk" ignore missing %}
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/components/progress-bar">Progress bar</a></h2>
+      <p>A progress bar to illustrate the user journey in a service flow.</p>
+    </div>
 
-  {% include "components/add-form-items.njk" ignore missing %}
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/components/tabs">Tabs</a></h2>
+      <p>Optimise screen area without sacrificing the amount of content.</p>
+    </div>
+
+    <div class="column-one-third">
+      <h2 class="heading-medium heading-index"><a href="/components/add-form-items">Add form items</a></h2>
+      <p>Allows a user the ability to add additional form fields.</p>
+    </div>
+
+  </div>
 
 </main>
 {% endblock %}
