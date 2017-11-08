@@ -17,7 +17,7 @@ module.exports = app
 
 
 // application settings
-app.set("view engine", "nunjucks")
+app.set("view engine", "njk")
 
 
 // set location of views

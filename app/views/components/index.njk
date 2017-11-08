@@ -1,15 +1,15 @@
 {% set title = pageTitle %}
-{% extends "layout.nunjucks" %}
-{% from 'macros/progress.nunjucks' import progress_item %}
+{% extends "layout.njk" %}
+{% from 'macros/progress.njk' import progress_item %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
 {% block content %}
 <main class="pattern-library" id="content" role="main">
 
-  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/phase_banner.njk" ignore missing %}
 
-  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+  {% include "partials/breadcrumb.njk" ignore missing %}
 
   <div class="grid-row">
 
@@ -30,13 +30,13 @@
 
   </div>
 
-  {% include "components/address-lookup.nunjucks" ignore missing %}
+  {% include "components/address-lookup.njk" ignore missing %}
 
-  {% include "components/progress-bar.nunjucks" ignore missing %}
+  {% include "components/progress-bar.njk" ignore missing %}
 
-  {% include "components/collapsibles.nunjucks" ignore missing %}
+  {% include "components/collapsibles.njk" ignore missing %}
 
-  {% include "components/tabs.nunjucks" ignore missing %}
+  {% include "components/tabs.njk" ignore missing %}
 
 </main>
 {% endblock %}

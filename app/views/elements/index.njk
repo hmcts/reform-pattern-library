@@ -1,16 +1,16 @@
 {% set title = pageTitle %}
-{% extends "layout.nunjucks" %}
-{% from 'macros/phase.nunjucks' import phase_banner %}
-{% from 'macros/button.nunjucks' import button %}
+{% extends "layout.njk" %}
+{% from 'macros/phase.njk' import phase_banner %}
+{% from 'macros/button.njk' import button %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
 {% block content %}
 <main class="pattern-library" id="content" role="main">
 
-  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/phase_banner.njk" ignore missing %}
 
-  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+  {% include "partials/breadcrumb.njk" ignore missing %}
 
   <div class="grid-row">
 
@@ -29,9 +29,9 @@
 
   </div>
 
-  {% include "elements/alpha-beta-banners.nunjucks" ignore missing %}
+  {% include "elements/alpha-beta-banners.njk" ignore missing %}
 
-  {% include "elements/buttons.nunjucks" ignore missing %}
+  {% include "elements/buttons.njk" ignore missing %}
 
 </main>
 {% endblock %}

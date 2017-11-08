@@ -1,22 +1,22 @@
-const gulp = require('gulp')
-const browserSync = require('browser-sync')
-const nodemon = require('gulp-nodemon')
+const gulp = require("gulp")
+const browserSync = require("browser-sync")
+const nodemon = require("gulp-nodemon")
 
 
 // Serve
-gulp.task('serve', [
-  'nodemon',
-  'browser-sync'
+gulp.task("serve", [
+  "nodemon",
+  "browser-sync"
 ])
 
 
 // browserSync
-gulp.task('browser-sync', function() {
+gulp.task("browser-sync", function() {
 
   browserSync.init(null, {
-    proxy: 'http://localhost:3000',
-    files: ['public/**/*.*'],
-    browser: 'firefox',
+    proxy: "http://localhost:3000",
+    files: ["public/**/*.*"],
+    browser: "firefox",
     notify: false,
     port: 3001
   })
@@ -25,19 +25,19 @@ gulp.task('browser-sync', function() {
 
 
 // Nodemon
-gulp.task('nodemon', function() {
+gulp.task("nodemon", function() {
 
   let started = false
 
   return nodemon({
-    script: 'server.js',
+    script: "server.js",
     ignore: [
-      'public/*',
-      'test/*',
-      'gulp-tasks/*',
-      'node_modules/*'
+      "public/*",
+      "test/*",
+      "gulp-tasks/*",
+      "node_modules/*"
     ]
-  }).on('start', () => {
+  }).on("start", () => {
     if (!started) {
       started = true;
     }

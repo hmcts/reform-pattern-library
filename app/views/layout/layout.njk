@@ -1,13 +1,13 @@
 {% extends "govuk_template.html" %}
 
-{% block head %}{% include "stylesheets.nunjucks" %}{% endblock %}
+{% block head %}{% include "stylesheets.njk" %}{% endblock %}
 
 {% block cookie_message %}
   <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
 {% endblock %}
 
 {% block proposition_header %}
-  {% include "proposition.nunjucks" %}
+  {% include "proposition.njk" %}
 {% endblock %}
 
 {% block header_class %}
@@ -15,9 +15,9 @@
 {% endblock %}
 
 {% block footer_support_links %}
-  {% include "support_links.nunjucks" %}
+  {% include "support_links.njk" %}
 {% endblock %}
 
 {% block body_end %}
-  {% include "scripts.nunjucks" %}
+  {% include "scripts.njk" %}
 {% endblock %}

@@ -1,10 +1,10 @@
-const gulp = require('gulp')
-const clean = require('del')
+const gulp = require("gulp")
+const clean = require("del")
 
 
 // Clean
-gulp.task('clean', function() {
+gulp.task("clean", function() {
   return clean([
-    'public'
+    "public"
   ])
 })

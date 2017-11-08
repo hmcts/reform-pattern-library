@@ -1,14 +1,14 @@
 {% set title = pageTitle %}
-{% extends "layout.nunjucks" %}
+{% extends "layout.njk" %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
 {% block content %}
 <main class="pattern-library" id="content" role="main">
 
-  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/phase_banner.njk" ignore missing %}
 
-  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+  {% include "partials/breadcrumb.njk" ignore missing %}
 
   <div class="grid-row">
 
@@ -16,17 +16,9 @@
 
       <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
 
-      <h2 class="heading-small">Contents:</h2>
-
-      <ul class="list">
-        <li><a href="#add-form-items">Add form items</a></li>
-      </ul>
-
     </div>
 
   </div>
-
-  {% include "layouts/add-form-items.nunjucks" ignore missing %}
 
 </main>
 {% endblock %}
