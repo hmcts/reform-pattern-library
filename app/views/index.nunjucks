@@ -20,54 +20,63 @@
 
   </div>
 
+
   <div class="grid-row">
 
-    <div class="column-one-third">
-      <h2 class="heading-medium heading-index"><a href="/address-lookup">Address lookup</a></h2>
-      <p>Find a collection of addresses using a postcode.</p>
+    <div class="column-one-half">
+      <h2 class="heading-medium heading-index"><a href="/elements">Elements</a></h2>
+      <p>A short description goers here&hellip;</p>
     </div>
 
-    <div class="column-one-third">
-      <h2 class="heading-medium heading-index"><a href="/progress-bar">Progress bar</a></h2>
-      <p>Show user progression in a service flow.</p>
+    <div class="column-one-half">
+      <h2 class="heading-medium heading-index"><a href="/components">Components</a></h2>
+      <p>A short description goers here&hellip;</p>
     </div>
+
+  </div>
+
+
+  <div class="grid-row">
+
+    <div class="column-one-half">
+      <h2 class="heading-medium heading-index"><a href="/layouts">Layouts</a></h2>
+      <p>A short description goers here&hellip;</p>
+    </div>
+
+    <div class="column-one-half">
+      <h2 class="heading-medium heading-index"><a href="/journeys">Journeys</a></h2>
+      <p>A short description goers here&hellip;</p>
+    </div>
+
+  </div>
+
+
+  <!--div class="grid-row">
 
     <div class="column-one-third">
       <h2 class="heading-medium heading-index"><a href="/collapsibles">Collapsibles</a></h2>
       <p>Show contextual information when required.</p>
     </div>
 
-  </div>
+  </div-->
 
-  <div class="grid-row">
+  <!--div class="grid-row">
 
     <div class="column-one-third">
       <h2 class="heading-medium heading-index"><a href="/tabs">Tabs</a></h2>
       <p>Optimise screen space without sacrificing content.</p>
     </div>
 
-    <div class="column-one-third">
-      <h2 class="heading-medium heading-index"><a href="/alpha-beta-banners">Alpha and beta banners</a></h2>
-      <p>Used as an indication of the state of a project.</p>
-    </div>
+  </div-->
 
-    <!--div class="column-one-third">
-      <h2 class="heading-medium heading-index"><a href="/alpha-beta-banners">Pagination</a></h2>
-      <p>...</p>
-    </div-->
-
-  </div>
-
-  <hr>
-
-  <div class="grid-row">
+  <!--div class="grid-row">
 
     <div class="column-one-third">
       <h2 class="heading-medium heading-index"><a href="/add-form-items">Add form items</a></h2>
       <p>Allow a user to add additional form items by clicking a button.</p>
     </div>
 
-  </div>
+  </div-->
 
 
 </main>

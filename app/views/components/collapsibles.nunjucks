@@ -1,28 +1,14 @@
-{% set title = pageTitle %}
-{% extends "layout.nunjucks" %}
+<!-- collapsibles -->
+<div id="collapsibles">
 
-{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+  <h2 class="heading-large">Collapsibles</h2>
 
-{% block content %}
-<main class="pattern-library" id="content" role="main">
-
-
-  {% include "partials/phase_banner.nunjucks" ignore missing %}
-
-  {% include "partials/breadcrumb.nunjucks" ignore missing %}
-
-
-  <h1 class="heading-xlarge">{{pageTitle}}</h1>
   <p>Make pages easier to scan, only showing contextual information when required.</p>
-
 
   <div class="example" data-title="Example">
 
-
     <p>Choose from the following questions:</p>
 
-
-    <!-- example -->
     <details class="collapsible">
 
       <summary class="collapsible-summary"><span class="summary">I want to search for my husband/wife&rsquo;s address on <abbr title="United Kingdom">UK</abbr> government databases (&pound;50)</span></summary>
@@ -34,8 +20,6 @@
 
     </details>
 
-
-    <!-- example -->
     <details class="collapsible">
 
       <summary class="collapsible-summary"><span class="summary">I need to send the application to an electronic address, for example my husband/wife&rsquo;s email (&pound;50)</span></summary>
@@ -49,8 +33,6 @@
 
     </details>
 
-
-    <!-- example -->
     <details class="collapsible">
 
       <summary class="collapsible-summary"><span class="summary">I need to send the application to my husband/wife&rsquo;s work address (&pound;50)</span></summary>
@@ -64,8 +46,6 @@
 
     </details>
 
-
-    <!-- example -->
     <details class="collapsible">
 
       <summary class="collapsible-summary"><span class="summary">I believe my husband/wife lives at that address, but chose not to respond (&pound;110)</span></summary>
@@ -86,6 +66,4 @@
 
   </div>
 
-
-</main>
-{% endblock %}
+</div>

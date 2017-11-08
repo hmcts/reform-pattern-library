@@ -1,23 +1,10 @@
-{% set title = pageTitle %}
-{% extends "layout.nunjucks" %}
-{% from 'macros/progress.nunjucks' import progress_item %}
+<!-- progress bar -->
+<div id="progress-bar">
 
-{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+  <h2 class="heading-large">Progress Bar</h2>
 
-{% block content %}
-<main class="pattern-library" id="content" role="main">
-
-
-  {% include "partials/phase_banner.nunjucks" ignore missing %}
-
-  {% include "partials/breadcrumb.nunjucks" ignore missing %}
-
-
-  <h1 class="heading-xlarge">{{pageTitle}}</h1>
   <p>A progress bar to illustrate the user journey in a service flow.</p>
 
-
-  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -33,8 +20,6 @@
 
   </div>
 
-
-  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -50,8 +35,6 @@
 
   </div>
 
-
-  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -67,8 +50,6 @@
 
   </div>
 
-
-  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -84,6 +65,4 @@
 
   </div>
 
-
-</main>
-{% endblock %}
+</div>

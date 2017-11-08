@@ -1,0 +1,25 @@
+  <!-- alpha and beta banners -->
+  <div id="alpha-beta-banners">
+
+    <h2 class="heading-large">Alpha and beta banners</h2>
+    <p>For documentation on this pattern please go to <a href="https://govuk-elements.herokuapp.com/alpha-beta-banners" target="_blank">GOV Elements<span class="visually-hidden"> (opens in a new window)</span></a>.</p>
+
+
+    <h2 class="heading-medium">Alpha banner</h2>
+
+    <div class="example" data-title="Example">
+      {{ phase_banner("ALPHA") }}
+    </div>
+
+    <pre><code class="prettyprint">{% raw %}{{ phase_banner("ALPHA") }}{% endraw %}</code></pre>
+
+
+    <h2 class="heading-medium">Beta banner</h2>
+
+    <div class="example" data-title="Example">
+      {{ phase_banner("BETA") }}
+    </div>
+
+    <pre><code class="prettyprint">{% raw %}{{ phase_banner("BETA") }}{% endraw %}</code></pre>
+
+  </div>

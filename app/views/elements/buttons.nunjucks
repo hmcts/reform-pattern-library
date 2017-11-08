@@ -1,0 +1,35 @@
+  <!-- buttons -->
+  <div id="buttons">
+
+    <h2 class="heading-large">Buttons</h2>
+    <p>For documentation on this pattern please go to <a href="https://govuk-elements.herokuapp.com/buttons" target="_blank">GOV Elements<span class="visually-hidden"> (opens in a new window)</span></a>.</p>
+
+
+    <h2 class="heading-medium">Primary button</h2>
+
+    <div class="example" data-title="Example">
+      {{ button("Primary button") }}
+    </div>
+
+    <pre><code class="prettyprint">{% raw %}{{ button("Primary button") }}{% endraw %}</code></pre>
+
+
+    <h2 class="heading-medium">Secondary button</h2>
+
+    <div class="example" data-title="Example">
+      {{ button("Secondary button", "secondary") }}
+    </div>
+
+    <pre><code class="prettyprint">{% raw %}{{ button("Secondary button", "secondary") }}{% endraw %}</code></pre>
+
+
+    <h2 class="heading-medium">Tertiary button</h2>
+
+    <div class="example" data-title="Example">
+      {{ button("Tertiary button", "tertiary") }}
+    </div>
+
+    <pre><code class="prettyprint">{% raw %}{{ button("Tertiary button", "tertiary") }}{% endraw %}</code></pre>
+
+
+  </div>

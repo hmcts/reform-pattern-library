@@ -1,18 +1,8 @@
-{% set title = pageTitle %}
-{% extends "layout.nunjucks" %}
+<!-- address lookup -->
+<div id="address-lookup">
 
-{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+  <h2 class="heading-large">Address lookup</h2>
 
-{% block content %}
-<main class="pattern-library" id="content" role="main">
-
-
-  {% include "partials/phase_banner.nunjucks" ignore missing %}
-
-  {% include "partials/breadcrumb.nunjucks" ignore missing %}
-
-
-  <h1 class="heading-xlarge">{{pageTitle}}</h1>
   <p>An address lookup pattern allowing the selection of an address from a postcode.</p>
 
   <div class="panel panel-border-wide">
@@ -20,7 +10,6 @@
   </div>
 
 
-  <!-- example -->
   <div class="example" data-title="Example">
 
 
@@ -93,5 +82,4 @@
   </div>
 
 
-</main>
-{% endblock %}
+</div>

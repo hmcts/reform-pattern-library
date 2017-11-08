@@ -1,5 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.nunjucks" %}
+{% from 'macros/progress.nunjucks' import progress_item %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -14,12 +15,28 @@
 
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <h2 class="heading-small">Contents:</h2>
+
+      <ul class="list">
+        <li><a href="#address-lookup">Address lookup</a></li>
+        <li><a href="#progress-bar">Progress Bar</a></li>
+        <li><a href="#collapsibles">Collaspsibles</a></li>
+        <li><a href="#tabs">Tabs</a></li>
+      </ul>
 
     </div>
 
   </div>
 
+  {% include "components/address-lookup.nunjucks" ignore missing %}
+
+  {% include "components/progress-bar.nunjucks" ignore missing %}
+
+  {% include "components/collapsibles.nunjucks" ignore missing %}
+
+  {% include "components/tabs.nunjucks" ignore missing %}
 
 </main>
 {% endblock %}

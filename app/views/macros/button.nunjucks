@@ -1,0 +1,10 @@
+{#
+  button
+    label    -
+    style      -
+  Renders a button
+#}
+
+{% macro button(label, style="primary") %}
+  <button class="button{% if (style == 'secondary') %} button-secondary{% endif %}{% if (style == 'tertiary') %} button-tertiary{% endif %}" type="button">{{ label }}</button>
+{% endmacro %}

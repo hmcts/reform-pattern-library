@@ -14,12 +14,11 @@
 
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
 
     </div>
 
   </div>
-
 
 </main>
 {% endblock %}

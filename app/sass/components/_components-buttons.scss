@@ -10,4 +10,8 @@ $module: "button";
     @include button($grey-3);
   }
 
+  &-tertiary {
+    @include button($grey-4);
+  }
+
 }

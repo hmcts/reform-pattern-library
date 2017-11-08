@@ -14,7 +14,7 @@ $module: "pattern-library";
     @extend %contain-floats;
     border: 1px solid $border-colour;
     position: relative;
-    margin: em(30) 0;
+    margin: em(15) 0;
     overflow: hidden;
     padding: em(40) em(15) em(15);
 
@@ -38,6 +38,14 @@ $module: "pattern-library";
   .heading-index {
     margin-top: 1em;
     margin-bottom: 0;
+  }
+
+
+  pre {
+    @include core-16;
+    border: 1px solid $border-colour;
+    margin: em(15) 0;
+    padding: em(15, 16);
   }
 
 

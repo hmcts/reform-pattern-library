@@ -2,7 +2,7 @@
   phase_banner
     phase    - (required) The phase is ALPHA or BETA
     url      - (default = #) A url for the feedback link
-  Renders a a phase banner
+  Renders a phase banner
 #}
 
 {% macro phase_banner(phase, url="#") %}

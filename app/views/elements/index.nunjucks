@@ -1,5 +1,7 @@
 {% set title = pageTitle %}
 {% extends "layout.nunjucks" %}
+{% from 'macros/phase.nunjucks' import phase_banner %}
+{% from 'macros/button.nunjucks' import button %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -14,12 +16,22 @@
 
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <h2 class="heading-small">Contents:</h2>
+
+      <ul class="list">
+        <li><a href="#alpha-beta-banners">Alpha and beta banners</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+      </ul>
 
     </div>
 
   </div>
 
+  {% include "elements/alpha-beta-banners.nunjucks" ignore missing %}
+
+  {% include "elements/buttons.nunjucks" ignore missing %}
 
 </main>
 {% endblock %}
