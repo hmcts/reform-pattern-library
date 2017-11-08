@@ -1,7 +1,7 @@
 const gulp = require("gulp")
 
 
-// Data
+// data
 gulp.task("data", function() {
 
   return gulp.src("app/data/**/*.json")

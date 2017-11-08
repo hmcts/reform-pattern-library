@@ -4,7 +4,7 @@ const uglify = require("gulp-uglify")
 const browserSync = require("browser-sync")
 
 
-// Javascripts
+// javascripts
 gulp.task("javascripts", function() {
 
   return gulp.src("app/javascripts/**/*.js")

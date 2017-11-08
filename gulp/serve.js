@@ -3,14 +3,14 @@ const browserSync = require("browser-sync")
 const nodemon = require("gulp-nodemon")
 
 
-// Serve
+// serve
 gulp.task("serve", [
   "nodemon",
   "browser-sync"
 ])
 
 
-// browserSync
+// browsersync
 gulp.task("browser-sync", function() {
 
   browserSync.init(null, {
@@ -24,7 +24,7 @@ gulp.task("browser-sync", function() {
 })
 
 
-// Nodemon
+// nodemon
 gulp.task("nodemon", function() {
 
   let started = false

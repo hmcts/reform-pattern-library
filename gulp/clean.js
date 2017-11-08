@@ -2,7 +2,7 @@ const gulp = require("gulp")
 const clean = require("del")
 
 
-// Clean
+// clean
 gulp.task("clean", function() {
   return clean([
     "public"
