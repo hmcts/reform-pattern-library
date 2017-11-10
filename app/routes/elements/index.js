@@ -35,4 +35,15 @@ routes.get("/" + base + "/alpha-beta-banners", function (req, res) {
 })
 
 
+routes.get("/" + base + "/form-elements", function (req, res) {
+  res.render(base + "/form-elements/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Form elements"
+    }
+  )
+})
+
+
 module.exports = routes;

@@ -23,7 +23,6 @@
 
   </div>
 
-  <!-- progress bar -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -38,6 +37,15 @@
     </div>
 
   </div>
+
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ progress_item("Appeal", "Complete") }}
+  {{ progress_item("DWP response", "", "Current") }}
+  {{ progress_item("Hearing booked") }}
+  {{ progress_item("Hearing") }}
+{% endraw %}
+</code></pre>
 
   <div class="example" data-title="Example">
 
@@ -54,6 +62,15 @@
 
   </div>
 
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ progress_item("Appeal", "Complete") }}
+  {{ progress_item("DWP response", "Complete") }}
+  {{ progress_item("Hearing booked", "", "Current") }}
+  {{ progress_item("Hearing") }}
+{% endraw %}
+</code></pre>
+
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -69,6 +86,15 @@
 
   </div>
 
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ progress_item("Appeal", "Complete") }}
+  {{ progress_item("DWP response", "Complete") }}
+  {{ progress_item("Hearing booked", "Complete") }}
+  {{ progress_item("Hearing", "", "Current") }}
+{% endraw %}
+</code></pre>
+
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -83,7 +109,15 @@
     </div>
 
   </div>
-  <!-- end -->
+
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ progress_item("Appeal", "Complete") }}
+  {{ progress_item("DWP response", "Complete") }}
+  {{ progress_item("Hearing booked", "Complete") }}
+  {{ progress_item("Hearing", "Complete") }}
+{% endraw %}
+</code></pre>
 
 </main>
 {% endblock %}

@@ -23,15 +23,17 @@
 
   </div>
 
-  <!-- alpha and beta banners -->
   <h2 class="heading-medium">Primary button</h2>
 
   <div class="example" data-title="Example">
     {{ button("Primary button") }}
   </div>
 
-  <pre><code class="prettyprint">{% raw %}{{ button("Primary button") }}{% endraw %}</code></pre>
-
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ button("Primary button") }}
+{% endraw %}
+</code></pre>
 
   <h2 class="heading-medium">Secondary button</h2>
 
@@ -39,8 +41,11 @@
     {{ button("Secondary button", "secondary") }}
   </div>
 
-  <pre><code class="prettyprint">{% raw %}{{ button("Secondary button", "secondary") }}{% endraw %}</code></pre>
-
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ button("Secondary button", "secondary") }}
+{% endraw %}
+</code></pre>
 
   <h2 class="heading-medium">Tertiary button</h2>
 
@@ -48,8 +53,11 @@
     {{ button("Tertiary button", "tertiary") }}
   </div>
 
-  <pre><code class="prettyprint">{% raw %}{{ button("Tertiary button", "tertiary") }}{% endraw %}</code></pre>
-  <!-- end -->
+<pre><code class="prettyprint">
+{%- raw %}
+  {{ button("Tertiary button", "tertiary") }}
+{% endraw %}
+</code></pre>
 
 </main>
 {% endblock %}
