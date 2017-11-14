@@ -41,6 +41,16 @@ $module: "pattern-library";
   }
 
 
+  .heading-contents {
+    margin-top: 3em;
+  }
+
+
+  .list-contents li {
+    @include core-16;
+  }
+
+
   pre {
     @include core-16;
     border: 1px solid $border-colour;
