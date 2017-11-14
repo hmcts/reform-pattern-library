@@ -23,41 +23,40 @@
 
   </div>
 
+
+  <!-- button primary -->
   <h2 class="heading-medium">Primary button</h2>
+  <div class="example" data-title="Example">{{ button("Primary button", type="submit") }}</div>
 
-  <div class="example" data-title="Example">
-    {{ button("Primary button") }}
-  </div>
+  <h3 class="heading-small">Nunjucks macro</h3>
+  <pre><code class="prettyprint">{%- raw %}{{ button("Primary button", type="submit") }}{% endraw %}</code></pre>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ button("Primary button") }}
-{% endraw %}
-</code></pre>
+  <h3 class="heading-small">Generated HTML</h3>
+  <pre><code class="prettyprint">&#x3C;button class=&#x22;button&#x22; type=&#x22;submit&#x22;&#x3E;Primary button&#x3C;/button&#x3E;</code></pre>
 
+
+  <!-- button secondary -->
   <h2 class="heading-medium">Secondary button</h2>
+  <div class="example" data-title="Example">{{ button("Secondary button", style="secondary") }}</div>
 
-  <div class="example" data-title="Example">
-    {{ button("Secondary button", "secondary") }}
-  </div>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ button("Secondary button", "secondary") }}
-{% endraw %}
-</code></pre>
+  <h3 class="heading-small">Nunjucks macro</h3>
+  <pre><code class="prettyprint">{%- raw %}{{ button("Secondary button", style="secondary") }}{% endraw %}</code></pre>
 
+  <h3 class="heading-small">Generated HTML</h3>
+  <pre><code class="prettyprint">&#x3C;button class=&#x22;button button-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary button&#x3C;/button&#x3E;</code></pre>
+
+
+  <!-- button tertiary -->
   <h2 class="heading-medium">Tertiary button</h2>
+  <div class="example" data-title="Example">{{ button("Tertiary button", style="tertiary") }}</div>
 
-  <div class="example" data-title="Example">
-    {{ button("Tertiary button", "tertiary") }}
-  </div>
+  <h3 class="heading-small">Nunjucks macro</h3>
+  <pre><code class="prettyprint">{%- raw %}{{ button("Tertiary button", style="tertiary") }}{% endraw %}</code></pre>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ button("Tertiary button", "tertiary") }}
-{% endraw %}
-</code></pre>
+  <h3 class="heading-small">Generated HTML</h3>
+  <pre><code class="prettyprint">&#x3C;button class=&#x22;button button-tertiary&#x22; type=&#x22;button&#x22;&#x3E;Tertiary button&#x3C;/button&#x3E;</code></pre>
+
 
 </main>
 {% endblock %}

@@ -1,0 +1,123 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">A collection of name patterns.</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- divorce (needs macro) -->
+  <h2 class="heading-medium">Divorce</h2>
+
+  <div class="example" data-title="Example">
+
+    <h1 class="heading-large">Enter your current names</h1>
+
+    <form class="form" method="POST">
+
+      <div class="form-group form-group-compound">
+
+        <fieldset>
+
+          <legend><h2 class="heading-small">Provide your full name</h2></legend>
+
+          <div class="form-group">
+            <label for="divorce-first-name">
+              <span class="form-label">First name(s)</span>
+              <span class="form-hint">Include all middle names here</span>
+            </label>
+            <input class="form-control" id="divorce-first-name" name="divorceFirstName" type="text">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="divorce-last-name">Last name(s)</label>
+            <input class="form-control" id="divorce-last-name" name="divorceLastName" type="text">
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <div class="form-group">
+
+        <fieldset>
+
+          <legend><h2 class="heading-small">Provide your husband&rsquo;s full name</h2></legend>
+
+          <div class="form-group">
+            <label for="husband-first-name">
+              <span class="form-label">Husband&rsquo;s first name(s)</span>
+              <span class="form-hint">Include all middle names here</span>
+            </label>
+            <input class="form-control" id="husband-first-name" name="husbandFirstName" type="text">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="husband-last-name">Husband&rsquo;s last name(s)</label>
+            <input class="form-control" id="husband-last-name" name="husbandLastName" type="text">
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <button class="button" type="submit">Continue</button>
+
+    </form>
+
+  </div>
+
+
+  <!-- probate (needs macro) -->
+  <h2 class="heading-medium">Probate</h2>
+
+  <div class="example" data-title="Example">
+
+    <form class="form" method="POST">
+
+      <h1 class="heading-large">What is your full name?</h1>
+
+      <form class="form" method="POST">
+
+        <div class="form-group">
+          <label for="probate-first-name">
+            <span class="form-label">First name(s)</span>
+            <span class="form-hint">Include middle names</span>
+          </label>
+          <input class="form-control" id="probate-first-name" name="probateFirstName" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="probate-last-name">Last name(s)</label>
+          <input class="form-control" id="probate-last-name" name="probateLastName" type="text">
+        </div>
+
+        <button class="button" type="submit">Continue</button>
+
+      </form>
+
+    </form>
+
+  </div>
+
+
+</main>
+{% endblock %}

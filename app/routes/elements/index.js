@@ -46,4 +46,26 @@ routes.get("/" + base + "/form-elements", function (req, res) {
 })
 
 
+routes.get("/" + base + "/dates", function (req, res) {
+  res.render(base + "/dates/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Dates"
+    }
+  )
+})
+
+
+routes.get("/" + base + "/names", function (req, res) {
+  res.render(base + "/names/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Names"
+    }
+  )
+})
+
+
 module.exports = routes;
