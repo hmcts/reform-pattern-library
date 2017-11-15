@@ -1,5 +1,6 @@
 {% extends "documentation.njk" %}
 {% from "macros/progress.njk" import progress_item %}
+{% from "macros/progress_list.njk" import progress_list %}
 {% block pattern_description %}Show users which stage of the journey they&rsquo;re at.{% endblock %}
 {% block documentation %}
 
@@ -8,14 +9,12 @@
 <!-- example -->
 <div class="example" data-title="Example">
 
-<div class="progress" aria-label="Appeal process">
-
-  <ol class="progress-list">
+{% call progress_list() %}
     {{ progress_item("Appeal", "Complete") }}
     {{ progress_item("DWP response", "", "Current") }}
     {{ progress_item("Hearing booked") }}
     {{ progress_item("Hearing") }}
-  </ol>
+{% endcall %}
 
 </div>
 

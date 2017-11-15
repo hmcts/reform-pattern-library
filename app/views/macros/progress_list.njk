@@ -1,0 +1,11 @@
+{#
+  progress_list
+  Renders a progress list
+#}
+
+{% macro progress_list() %}
+<div class="progress" aria-label="Appeal process">
+  <ol class="progress-list">
+    {{ caller() }}
+  </ol>
+{% endmacro %}
