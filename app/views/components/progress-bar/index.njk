@@ -17,12 +17,17 @@
 
       <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
 
-      <p class="lede">A progress bar to illustrate the user journey in a service flow.</p>
+      <p class="lede">Show users which stage of the journey they&rsquo;re at.</p>
 
     </div>
 
   </div>
 
+
+  <h2 class="heading-medium">Examples</h2>
+
+
+  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -38,15 +43,19 @@
 
   </div>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ progress_item("Appeal", "Complete") }}
-  {{ progress_item("DWP response", "", "Current") }}
-  {{ progress_item("Hearing booked") }}
-  {{ progress_item("Hearing") }}
-{% endraw %}
-</code></pre>
+  <pre class="language-markup" data-title="Nunjucks">
+    <code>
+    {%- raw %}
+    {{ progress_item("Appeal", "Complete") }}
+    {{ progress_item("DWP response", "", "Current") }}
+    {{ progress_item("Hearing booked") }}
+    {{ progress_item("Hearing") }}
+    {% endraw %}
+    </code>
+  </pre>
 
+
+  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -62,15 +71,19 @@
 
   </div>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ progress_item("Appeal", "Complete") }}
-  {{ progress_item("DWP response", "Complete") }}
-  {{ progress_item("Hearing booked", "", "Current") }}
-  {{ progress_item("Hearing") }}
-{% endraw %}
-</code></pre>
+  <pre class="language-markup" data-title="Nunjucks">
+    <code>
+    {%- raw %}
+    {{ progress_item("Appeal", "Complete") }}
+    {{ progress_item("DWP response", "Complete") }}
+    {{ progress_item("Hearing booked", "", "Current") }}
+    {{ progress_item("Hearing") }}
+    {% endraw %}
+    </code>
+  </pre>
 
+
+  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -86,15 +99,19 @@
 
   </div>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ progress_item("Appeal", "Complete") }}
-  {{ progress_item("DWP response", "Complete") }}
-  {{ progress_item("Hearing booked", "Complete") }}
-  {{ progress_item("Hearing", "", "Current") }}
-{% endraw %}
-</code></pre>
+  <pre class="language-markup" data-title="Nunjucks">
+    <code>
+    {%- raw %}
+    {{ progress_item("Appeal", "Complete") }}
+    {{ progress_item("DWP response", "Complete") }}
+    {{ progress_item("Hearing booked", "Complete") }}
+    {{ progress_item("Hearing", "", "Current") }}
+    {% endraw %}
+    </code>
+  </pre>
 
+
+  <!-- example -->
   <div class="example" data-title="Example">
 
     <div class="progress" aria-label="Appeal process">
@@ -110,14 +127,36 @@
 
   </div>
 
-<pre><code class="prettyprint">
-{%- raw %}
-  {{ progress_item("Appeal", "Complete") }}
-  {{ progress_item("DWP response", "Complete") }}
-  {{ progress_item("Hearing booked", "Complete") }}
-  {{ progress_item("Hearing", "Complete") }}
-{% endraw %}
-</code></pre>
+  <pre class="language-markup" data-title="Nunjucks">
+    <code>
+    {%- raw %}
+    {{ progress_item("Appeal", "Complete") }}
+    {{ progress_item("DWP response", "Complete") }}
+    {{ progress_item("Hearing booked", "Complete") }}
+    {{ progress_item("Hearing", "Complete") }}
+    {% endraw %}
+    </code>
+  </pre>
+
+
+  <h3 class="heading-medium">When to use this pattern</h3>
+
+  <p>Use this pattern for all XYZ.</p>
+
+  <h3 class="heading-medium">Research for this pattern</h3>
+
+  <p>Maybe a link to some research here with a brief explanation of why we&rsquo;re making this a pattern.</p>
+
+  <h3 class="heading-medium">Related patterns</h3>
+
+  <p>You may also want to use these:</p>
+
+  <ul class="list list-bullet">
+    <li><a href="#">Related link</a></li>
+    <li><a href="#">Another related link</a></li>
+    <li><a href="#">Add another link</a></li>
+  </ul>
+
 
 </main>
 {% endblock %}

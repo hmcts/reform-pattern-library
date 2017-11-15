@@ -16,7 +16,7 @@
 
       <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
 
-      <p class="lede">Allows a user the ability to add additional form fields.</p>
+      <p class="lede">Allow users to add extra form fields for more information.</p>
 
     </div>
 
@@ -33,7 +33,7 @@
 
   <div class="example" data-title="Example">
 
-    <form class="form" action="/add-form-items" data-js="form">
+    <form class="form" method="POST" data-js="form">
 
       <div class="form-group">
         <label class="form-label-bold" for="example-1">Example 1</label>
@@ -58,13 +58,31 @@
       </div>
 
       <div class="form-group">
-        <button class="button" type="submit" disabled="disabled" aria-disabled="true">Continue</button>
+        <button class="button" type="submit">Continue</button>
       </div>
 
     </form>
 
   </div>
   <!-- end -->
+
+  <h3 class="heading-medium">When to use this pattern</h3>
+
+  <p>Use this pattern for all XYZ.</p>
+
+  <h3 class="heading-medium">Research for this pattern</h3>
+
+  <p>Maybe a link to some research here with a brief explanation of why we&rsquo;re making this a pattern.</p>
+
+  <h3 class="heading-medium">Related patterns</h3>
+
+  <p>You may also want to use these:</p>
+
+  <ul class="list list-bullet">
+    <li><a href="#">Related link</a></li>
+    <li><a href="#">Another related link</a></li>
+    <li><a href="#">Add another link</a></li>
+  </ul>
 
 </main>
 {% endblock %}

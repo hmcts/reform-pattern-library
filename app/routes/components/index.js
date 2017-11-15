@@ -57,12 +57,12 @@ routes.get("/" + base + "/tabs", function (req, res) {
 })
 
 
-routes.get("/" + base + "/add-form-items", function (req, res) {
-  res.render(base + "/add-form-items/index",
+routes.get("/" + base + "/add-form-fields", function (req, res) {
+  res.render(base + "/add-form-fields/index",
     data = {
       section : "components",
       sectionName : "Components",
-      pageTitle : "Add form items"
+      pageTitle : "Add form fields"
     }
   )
 })

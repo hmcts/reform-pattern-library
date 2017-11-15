@@ -3,14 +3,15 @@
 
   field: (required) A field object containing name, id and value
   label: (required) A label to apply to the field
+  type: Can be either (text, email, tel)
   hint:  (optional) Extra hint text to place under the label
 
   Renders a simple text input field.
 #}
 
-{% macro textbox(field, label, controlwidth=false, hint=false) %}
+{% macro textbox(field, label, controlwidth=false, type="text", hint=false) %}
   <label class="form-label" for="{{field.id}}">{{label}}{%- if hint %}<span class="form-hint">{{hint}}</span>{% endif %}</label>
-  <input class="form-control{%- if controlwidth %} form-control-{{controlwidth}}{%- endif %}" id="{{field.id}}" name="{{field.name}}" type="text"{%- if field.value %}value="{{field.value}}"{% endif %}>
+  <input class="form-control{%- if controlwidth %} form-control-{{controlwidth}}{%- endif %}" id="{{field.id}}" name="{{field.name}}" type="{{type}}"{%- if field.value %}value="{{field.value}}"{% endif %}>
 {% endmacro %}
 
 
