@@ -18,10 +18,12 @@
 
 ```code
 {%- raw %}
-{{ progress_item("Appeal", "Complete") }}
-{{ progress_item("DWP response", "", "Current") }}
-{{ progress_item("Hearing booked") }}
-{{ progress_item("Hearing") }}
+{% call progress_list() %}
+    {{ progress_item("Appeal", "Complete") }}
+    {{ progress_item("DWP response", "", "Current") }}
+    {{ progress_item("Hearing booked") }}
+    {{ progress_item("Hearing") }}
+{% endcall %}
 {% endraw %}
 ```
 
