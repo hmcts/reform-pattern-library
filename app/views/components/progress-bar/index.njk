@@ -1,164 +1,139 @@
-{% set title = pageTitle %}
-{% extends "layout.njk" %}
+{% extends "documentation.njk" %}
 {% from "macros/progress.njk" import progress_item %}
+{% block pattern_description %}Show users which stage of the journey they&rsquo;re at.{% endblock %}
+{% block documentation %}
 
-{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+<h2 class="heading-medium">Examples</h2>
 
-{% block content %}
-<main class="pattern-library" id="content" role="main">
+<!-- example -->
+<div class="example" data-title="Example">
 
-  {% include "partials/phase_banner.njk" ignore missing %}
+<div class="progress" aria-label="Appeal process">
 
-  {% include "partials/breadcrumb.njk" ignore missing %}
-
-  <div class="grid-row">
-
-    <div class="column-two-thirds">
-
-      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
-
-      <p class="lede">Show users which stage of the journey they&rsquo;re at.</p>
-
-    </div>
-
-  </div>
-
-
-  <h2 class="heading-medium">Examples</h2>
-
-
-  <!-- example -->
-  <div class="example" data-title="Example">
-
-    <div class="progress" aria-label="Appeal process">
-
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "", "Current") }}
-        {{ progress_item("Hearing booked") }}
-        {{ progress_item("Hearing") }}
-      </ol>
-
-    </div>
-
-  </div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>
-    {%- raw %}
+  <ol class="progress-list">
     {{ progress_item("Appeal", "Complete") }}
     {{ progress_item("DWP response", "", "Current") }}
     {{ progress_item("Hearing booked") }}
     {{ progress_item("Hearing") }}
-    {% endraw %}
-    </code>
-  </pre>
+  </ol>
+
+</div>
+
+</div>
+
+<pre class="language-markup" data-title="Nunjucks">
+<code>
+{%- raw %}
+{{ progress_item("Appeal", "Complete") }}
+{{ progress_item("DWP response", "", "Current") }}
+{{ progress_item("Hearing booked") }}
+{{ progress_item("Hearing") }}
+{% endraw %}
+</code>
+</pre>
 
 
-  <!-- example -->
-  <div class="example" data-title="Example">
+<!-- example -->
+<div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
+<div class="progress" aria-label="Appeal process">
 
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "Complete") }}
-        {{ progress_item("Hearing booked", "", "Current") }}
-        {{ progress_item("Hearing") }}
-      </ol>
-
-    </div>
-
-  </div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>
-    {%- raw %}
+  <ol class="progress-list">
     {{ progress_item("Appeal", "Complete") }}
     {{ progress_item("DWP response", "Complete") }}
     {{ progress_item("Hearing booked", "", "Current") }}
     {{ progress_item("Hearing") }}
-    {% endraw %}
-    </code>
-  </pre>
+  </ol>
+
+</div>
+
+</div>
+
+<pre class="language-markup" data-title="Nunjucks">
+<code>
+{%- raw %}
+{{ progress_item("Appeal", "Complete") }}
+{{ progress_item("DWP response", "Complete") }}
+{{ progress_item("Hearing booked", "", "Current") }}
+{{ progress_item("Hearing") }}
+{% endraw %}
+</code>
+</pre>
 
 
-  <!-- example -->
-  <div class="example" data-title="Example">
+<!-- example -->
+<div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
+<div class="progress" aria-label="Appeal process">
 
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "Complete") }}
-        {{ progress_item("Hearing booked", "Complete") }}
-        {{ progress_item("Hearing", "", "Current") }}
-      </ol>
-
-    </div>
-
-  </div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>
-    {%- raw %}
+  <ol class="progress-list">
     {{ progress_item("Appeal", "Complete") }}
     {{ progress_item("DWP response", "Complete") }}
     {{ progress_item("Hearing booked", "Complete") }}
     {{ progress_item("Hearing", "", "Current") }}
-    {% endraw %}
-    </code>
-  </pre>
+  </ol>
+
+</div>
+
+</div>
+
+<pre class="language-markup" data-title="Nunjucks">
+<code>
+{%- raw %}
+{{ progress_item("Appeal", "Complete") }}
+{{ progress_item("DWP response", "Complete") }}
+{{ progress_item("Hearing booked", "Complete") }}
+{{ progress_item("Hearing", "", "Current") }}
+{% endraw %}
+</code>
+</pre>
 
 
-  <!-- example -->
-  <div class="example" data-title="Example">
+<!-- example -->
+<div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
+<div class="progress" aria-label="Appeal process">
 
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "Complete") }}
-        {{ progress_item("Hearing booked", "Complete") }}
-        {{ progress_item("Hearing", "Complete") }}
-      </ol>
-
-    </div>
-
-  </div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>
-    {%- raw %}
+  <ol class="progress-list">
     {{ progress_item("Appeal", "Complete") }}
     {{ progress_item("DWP response", "Complete") }}
     {{ progress_item("Hearing booked", "Complete") }}
     {{ progress_item("Hearing", "Complete") }}
-    {% endraw %}
-    </code>
-  </pre>
+  </ol>
+
+</div>
+
+</div>
+
+<pre class="language-markup" data-title="Nunjucks">
+<code>
+{%- raw %}
+{{ progress_item("Appeal", "Complete") }}
+{{ progress_item("DWP response", "Complete") }}
+{{ progress_item("Hearing booked", "Complete") }}
+{{ progress_item("Hearing", "Complete") }}
+{% endraw %}
+</code>
+</pre>
 
 
-  {% markdown %}
+{% markdown %}
 
-  ## When to use this pattern
+## When to use this pattern
 
-  Use this pattern for all XYZ.
+Use this pattern for all XYZ.
 
-  ## Research for this pattern
+## Research for this pattern
 
-  Maybe a link to some research here with a brief explanation of why we&rsquo;re making this a pattern.
+Maybe a link to some research here with a brief explanation of why we&rsquo;re making this a pattern.
 
-  ## Related patterns
+## Related patterns
 
-  You may also want to use these:
+You may also want to use these:
 
-  * [Related link](#)
-  * [Another related link](#)
-  * [Add another link](#)
+* [Related link](#)
+* [Another related link](#)
+* [Add another link](#)
 
-  {% endmarkdown %}
-
-
-</main>
+{% endmarkdown %}
 {% endblock %}

@@ -1,0 +1,51 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}{% include "stylesheets.njk" %}{% endblock %}
+
+{% block cookie_message %}
+  <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+{% endblock %}
+
+{% block proposition_header %}
+  {% include "proposition.njk" %}
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block footer_support_links %}
+  {% include "support_links.njk" %}
+{% endblock %}
+
+{% block body_end %}
+  {% include "scripts.njk" %}
+{% endblock %}
+
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">{% block pattern_description %}{% endblock %}</p>
+
+    </div>
+
+  </div>
+
+{% block documentation %}
+{% endblock %}
+
+</main>
+{% endblock %}
