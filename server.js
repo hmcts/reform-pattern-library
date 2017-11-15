@@ -106,6 +106,17 @@ renderer.list = function (text) {
   return "<ul class=\"list list-bullet\">" + text + "</ul>";
 }
 
+// code and examples
+
+renderer.code = function (text, lang) {
+  if (lang == "code") {
+      return '<pre class="language-markup" data-title="Nunjucks"><code>' + text + '</code></pre>';
+  }
+  else if (lang == "example") {
+      return '<div class="example" data-title="Example">' + text + '</div>';
+  }
+}
+
 
 marked.setOptions({
   renderer: renderer,

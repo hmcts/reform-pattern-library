@@ -3,34 +3,29 @@
 {% from "macros/progress_list.njk" import progress_list %}
 {% block pattern_description %}Show users which stage of the journey they&rsquo;re at.{% endblock %}
 {% block documentation %}
+{% markdown %}
 
-<h2 class="heading-medium">Examples</h2>
+## Examples
 
-<!-- example -->
-<div class="example" data-title="Example">
+```example
+    {% call progress_list() %}
+        {{ progress_item("Appeal", "Complete") }}
+        {{ progress_item("DWP response", "", "Current") }}
+        {{ progress_item("Hearing booked") }}
+        {{ progress_item("Hearing") }}
+    {% endcall %}
+```
 
-{% call progress_list() %}
-    {{ progress_item("Appeal", "Complete") }}
-    {{ progress_item("DWP response", "", "Current") }}
-    {{ progress_item("Hearing booked") }}
-    {{ progress_item("Hearing") }}
-{% endcall %}
-
-</div>
-
-</div>
-
-<pre class="language-markup" data-title="Nunjucks">
-<code>
+```code
 {%- raw %}
 {{ progress_item("Appeal", "Complete") }}
 {{ progress_item("DWP response", "", "Current") }}
 {{ progress_item("Hearing booked") }}
 {{ progress_item("Hearing") }}
 {% endraw %}
-</code>
-</pre>
+```
 
+{% endmarkdown %}
 
 <!-- example -->
 <div class="example" data-title="Example">
