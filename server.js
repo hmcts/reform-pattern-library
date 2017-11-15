@@ -1,44 +1,11 @@
-const path = require("path")
-const express = require("express")
-const session = require("express-session")
+const path     = require("path")
+const express  = require("express")
+const session  = require("express-session")
 const nunjucks = require("nunjucks")
-const markdown = require('nunjucks-markdown')
-const marked = require('marked')
+const markdown = require("nunjucks-markdown")
+const marked   = require("marked")
 
-var renderer = new marked.Renderer();
-renderer.heading = function (text, level) {
-var headingClass = 0;
-    switch(level) {
-        case 1:
-            headingClass = "heading-xlarge";
-            break;
-        case 2:
-            headingClass = "heading-large";
-            break;
-        case 3:
-            headingClass = "heading-medium";
-            break;
-        case 4:
-            headingClass = "heading-small";
-            break;
-    }
-
-  var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-
-  return '<h' + level + ' class="' + headingClass + '">' +
-                  text + '</h' + level + '>';
-}
-
-marked.setOptions({
-  renderer: renderer,
-  gfm: true,
-  tables: true,
-  breaks: false,
-  pendantic: false,
-  sanitize: true,
-  smartLists: true,
-  smartypants: false
-});
+const IS_HEROKU = process.env.hasOwnProperty('IS_HEROKU')
 
 const routes = require("./app/routes")
 const locals = require("./app/locals")
@@ -50,6 +17,7 @@ const bodyParser = require("body-parser")
 const app = express()
 
 module.exports = app
+
 
 // application settings
 app.set("view engine", "njk")
@@ -64,16 +32,13 @@ const appViews = [
   path.join(__dirname, "/node_modules/govuk_template_jinja/views/layouts")
 ]
 
-
-// views defined in appViews
-var env = nunjucks.configure(appViews, {
+const nunjucksAppEnv = nunjucks.configure(appViews, {
   express: app,
   autoescape: true,
   watch: true,
   noCache: true
-});
+})
 
-markdown.register(env, marked);
 
 // middleware to serve static assets
 app.use("/public", express.static(path.join(__dirname, "/public")))
@@ -109,6 +74,58 @@ app.locals = locals
 app.use("/", routes);
 
 
+var renderer = new marked.Renderer();
+
+
+// headings
+renderer.heading = function (text, level) {
+
+  var headingClass = 0;
+
+  switch(level) {
+    case 1:
+      headingClass = "heading-large";
+      break;
+    case 2:
+      headingClass = "heading-medium";
+      break;
+    case 3:
+      headingClass = "heading-small";
+      break;
+  }
+
+  var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+  return '<h' + level + ' class="' + headingClass + '">' + text + '</h' + level + '>';
+
+}
+
+
+// lists
+renderer.list = function (text) {
+  return "<ul class=\"list list-bullet\">" + text + "</ul>";
+}
+
+
+marked.setOptions({
+  renderer: renderer,
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pendantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
+
+
+// markdown register
+markdown.register(nunjucksAppEnv, marked);
+
+
 // start app and listen
-app.listen(port)
-console.log("Listening on port: " + port)
+app.listen(port, function () {
+  if (!IS_HEROKU) {
+    console.log("Listening on port: " + port)
+  }
+})
