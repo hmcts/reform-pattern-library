@@ -1,5 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
+{% from "macros/address-lookup/macro.njk" import reformAddressLookup %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -22,96 +23,8 @@
 
   </div>
 
-  <!-- address lookup -->
-  <div id="address-lookup">
-
-    <h1 class="heading-medium">Example</h1>
-
-    <div class="panel panel-border-wide" role="note">
-      <p>For this example, enter these postcodes: <b>NW1 5DA</b> or <b>NW1 4QA</b>.</p>
-    </div>
-
-    <div class="example" data-title="Example">
-
-      <form class="form" method="POST" data-js="postcode-lookup">
-
-        <fieldset>
-
-          <legend class="visually-hidden">Address</legend>
-
-          <div class="form-group form-group-related">
-
-            <label class="form-label-bold" for="postcode-lookup">Enter a UK postcode</label>
-
-            <div class="form-postcode">
-              <input class="form-control form-control-1-4" id="postcode-lookup" type="text"><button class="button" id="postcode-button" type="submit">Find address</button>
-            </div>
-
-          </div>
-
-          <div class="hidden" id="postcode-addresses" aria-live="assertive"></div>
-
-          <div class="hidden" id="manual-address" role="status" aria-live="polite">
-
-            <div class="form-group form-group-compound">
-              <label class="form-label" for="address-line-1">Building and street</label>
-              <input class="form-control form-control-2-3" id="address-line-1" name="addressLine1" type="text">
-            </div>
-
-            <div class="form-group form-group-compound">
-              <label class="visually-hidden" for="address-line-2">Building and street address line 2</label>
-              <input class="form-control form-control-2-3" id="address-line-2" name="addressLine2" type="text">
-            </div>
-
-            <div class="form-group">
-              <label class="visually-hidden" for="address-line-3">Building and street address line 3</label>
-              <input class="form-control form-control-2-3" id="address-line-3" name="addressLine3" type="text">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="town-or-city">Town or city</label>
-              <input class="form-control" id="town-or-city" name="townOrCity" type="text">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="county">County (optional)</label>
-              <input class="form-control" id="county" name="county" type="text">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="postcode">Postcode</label>
-              <input class="form-control form-control-1-4" id="postcode" name="postcode" type="text">
-            </div>
-
-          </div>
-
-        </fieldset>
-
-      </form>
-
-    </div>
-
-  </div>
-  <!-- end -->
-
   {% markdown %}
-
-  ## When to use this pattern
-
-  Use this pattern for all XYZ.
-
-  ## Research for this pattern
-
-  Maybe a link to some research here with a brief explanation of why we&rsquo;re making this a pattern.
-
-  ## Related patterns
-
-  You may also want to use these:
-
-  * [Related link](#)
-  * [Another related link](#)
-  * [Add another link](#)
-
+    {% include "./docs.md" %}
   {% endmarkdown %}
 
 </main>

@@ -121,6 +121,12 @@ renderer.list = function (text, type) {
 }
 
 
+// blockquotes
+renderer.blockquote = function (text) {
+  return "<div class=\"panel panel-border-wide\" role=\"note\">" + text + "</div>";
+}
+
+
 marked.setOptions({
   renderer: renderer,
   gfm: true,
