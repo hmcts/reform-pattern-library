@@ -1,6 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/phase.njk" import phase_banner %}
+{% from "macros/phase-banners/macro.njk" import reformPhaseBanner %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -23,21 +23,9 @@
 
   </div>
 
-  <h2 class="heading-medium">Alpha banner</h2>
-
-  <div class="example" data-title="Example">{{ phase_banner("ALPHA") }}</div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>{%- raw %}{{ phase_banner("ALPHA") }}{% endraw %}</code>
-  </pre>
-
-  <h2 class="heading-medium">Beta banner</h2>
-
-  <div class="example" data-title="Example">{{ phase_banner("BETA") }}</div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>{%- raw %}{{ phase_banner("BETA") }}{% endraw %}</code>
-  </pre>
+  {% markdown %}
+    {% include "./docs.md" %}
+  {% endmarkdown %}
 
 </main>
 {% endblock %}
