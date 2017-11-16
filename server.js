@@ -94,9 +94,9 @@ renderer.heading = function (text, level) {
       break;
   }
 
-  var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+  var escapedText = text.toLowerCase().replace(/[^\w]+/g, "-");
 
-  return '<h' + level + ' class="' + headingClass + '">' + text + '</h' + level + '>';
+  return "<h" + level + " class=" + headingClass + ">" + text + "</h" + level + ">";
 
 }
 
