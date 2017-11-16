@@ -1,5 +1,11 @@
 ## Input types
 
+Mobile devices take advantage of HTML5 input types:
+* text (default)
+* email
+* tel
+* password
+
 ```example
 {{ reformInput(label="Text input", id="text", name="text") }}
 ```
