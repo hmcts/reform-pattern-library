@@ -35,12 +35,12 @@ routes.get("/" + base + "/collapsibles", function (req, res) {
 })
 
 
-routes.get("/" + base + "/progress-bar", function (req, res) {
-  res.render(base + "/progress-bar/index",
+routes.get("/" + base + "/progress-list", function (req, res) {
+  res.render(base + "/progress-list/index",
     data = {
       section : "components",
       sectionName : "Components",
-      pageTitle : "Progress bar"
+      pageTitle : "Progress list"
     }
   )
 })

@@ -1,0 +1,31 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+{% from "macros/progress-list/macro.njk" import reformProgressList %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+
+      <p class="lede">Show users which stage of the journey they&rsquo;re at.</p>
+
+    </div>
+
+  </div>
+
+  {% markdown %}
+    {% include "./progress-list.md" %}
+  {% endmarkdown %}
+
+</main>
+{% endblock %}

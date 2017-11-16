@@ -101,8 +101,22 @@ renderer.heading = function (text, level) {
 }
 
 
+// nunjucks / HTML / examples
+renderer.code = function (text, lang) {
+  if (lang == "nunjucks") {
+      return "<pre class=\"language-markup\" data-title=\"Nunjucks\"><code>" + text + "</code></pre>";
+  }
+  else if (lang == "html") {
+      return "<pre class=\"language-markup\" data-title=\"HTML\"><code>" + text + "</code></pre>";
+  }
+  else if (lang == "example") {
+      return "<div class=\"example\" data-title=\"Example\">" + text + "</div>";
+  }
+}
+
+
 // lists
-renderer.list = function (text) {
+renderer.list = function (text, type) {
   return "<ul class=\"list list-bullet\">" + text + "</ul>";
 }
 
