@@ -32,6 +32,27 @@
         complete: true
       },
       three: {
+        label: "Hearing booked"
+      },
+      four: {
+        label: "Hearing"
+      }
+    })
+  }}
+{% endraw %}
+```
+
+```example
+  {{ reformProgressList({
+      one: {
+        label: "Appeal",
+        complete: true
+      },
+      two: {
+        label: "DWP response",
+        complete: true
+      },
+      three: {
         label: "Hearing booked",
         current: true
       },
@@ -40,6 +61,28 @@
       }
     })
   }}
+```
+
+```nunjucks
+{% raw %}
+  {{ reformProgressList({
+      one: {
+        label: "Appeal",
+        complete: true
+      },
+      two: {
+        label: "DWP response",
+        complete: true
+      },
+      three: {
+        label: "Hearing booked",
+        complete: true
+      },
+      four: {
+        label: "Hearing"
+      }
+    })
+  }}
 {% endraw %}
 ```
 
@@ -55,10 +98,11 @@
       },
       three: {
         label: "Hearing booked",
-        current: true
+        complete: true
       },
       four: {
-        label: "Hearing"
+        label: "Hearing",
+        current: true
       }
     })
   }}
@@ -73,13 +117,15 @@
       },
       two: {
         label: "DWP response",
-        current: true
+        complete: true
       },
       three: {
-        label: "Hearing booked"
+        label: "Hearing booked",
+        complete: true
       },
       four: {
-        label: "Hearing"
+        label: "Hearing",
+        current: true
       }
     })
   }}
@@ -94,13 +140,15 @@
       },
       two: {
         label: "DWP response",
-        current: true
+        complete: true
       },
       three: {
-        label: "Hearing booked"
+        label: "Hearing booked",
+        complete: true
       },
       four: {
-        label: "Hearing"
+        label: "Hearing",
+        complete: true
       }
     })
   }}
@@ -115,55 +163,15 @@
       },
       two: {
         label: "DWP response",
-        current: true
-      },
-      three: {
-        label: "Hearing booked"
-      },
-      four: {
-        label: "Hearing"
-      }
-    })
-  }}
-{% endraw %}
-```
-
-```example
-  {{ reformProgressList({
-      one: {
-        label: "Appeal",
         complete: true
       },
-      two: {
-        label: "DWP response",
-        current: true
-      },
       three: {
-        label: "Hearing booked"
-      },
-      four: {
-        label: "Hearing"
-      }
-    })
-  }}
-```
-
-```nunjucks
-{% raw %}
-  {{ reformProgressList({
-      one: {
-        label: "Appeal",
+        label: "Hearing booked",
         complete: true
       },
-      two: {
-        label: "DWP response",
-        current: true
-      },
-      three: {
-        label: "Hearing booked"
-      },
       four: {
-        label: "Hearing"
+        label: "Hearing",
+        complete: true
       }
     })
   }}
