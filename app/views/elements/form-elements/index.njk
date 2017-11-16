@@ -1,8 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/button.njk" import button %}
 {% from "macros/fields.njk" import textbox %}
-{% from "macros/fields.njk" import moneybox %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -17,9 +15,9 @@
 
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge"><span class="heading-secondary">{{service_title}}</span> {{pageTitle}}</h1>
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
 
-      <p class="lede">A collection of form patterns.</p>
+      <p class="lede">{{pageStrapline}}</p>
 
     </div>
 
@@ -75,42 +73,6 @@
     &lt;input class=&quot;form-control form-control-2-3&quot; id=&quot;ID&quot; name=&quot;Name&quot; type=&quot;text&quot;&gt;
     </code>
   </pre>
-
-
-  <!--h2 class="heading-medium">Money fields</h2>
-
-  <p class="lead-in">You can use the following currency:</p>
-  <ul class="list list-bullet">
-    <li>pounds</li>
-    <li>euros</li>
-    <li>dollars</li>
-  </ul>
-
-  <div class="example" data-title="Examples">
-
-    <div class="form-group">
-      {% set field = { id: "net-income-pounds", name: "net-income-pounds" } %}
-      {{ moneybox(field, "Total monthly income", currency="pounds") }}
-    </div>
-
-    <div class="form-group">
-      {% set field = { id: "net-income-euros", name: "net-income-euros" } %}
-      {{ moneybox(field, "Total monthly income", currency="euros") }}
-    </div>
-
-    {% set field = { id: "net-income-dollars", name: "net-income-dollars" } %}
-    {{ moneybox(field, "Total monthly income", currency="dollars") }}
-
-  </div-->
-
-
-<!-- code snippet -->
-{# <pre><code class="prettyprint">
-{%- raw %}
-  {% set field = { id: "ID", name: "NAME" } %}
-  {{moneybox(field, "LABEL", currency="pounds") }}
-{% endraw %}
-</code></pre> #}
 
 </main>
 {% endblock %}
