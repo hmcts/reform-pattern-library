@@ -123,7 +123,7 @@ renderer.list = function (text, type) {
 
 // blockquotes
 renderer.blockquote = function (text) {
-  return "<div class=\"panel panel-border-wide\" role=\"note\">" + text + "</div>";
+  return "<div class=\"panel panel-border-wide text\" role=\"note\">" + text + "</div>";
 }
 
 

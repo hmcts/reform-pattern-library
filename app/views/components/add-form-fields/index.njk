@@ -1,5 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
+{% from "macros/add-form-fields/macro.njk" import reformAddFormFields %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -22,68 +23,8 @@
 
   </div>
 
-  <!-- tabs -->
-  <div class="text">
-
-    <div class="panel panel-border-wide" role="note">
-      <p>A screen reader is informed of only the dynamically generated item being added, based on user interaction and a collection of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes.</p>
-    </div>
-
-  </div>
-
-  <div class="example" data-title="Preview">
-
-    <form class="form" method="POST" data-js="form">
-
-      <div class="form-group">
-        <label class="form-label-bold" for="example-1">Example 1</label>
-        <textarea class="form-control form-control-3-4" rows="3" id="example-1" name="example-1">My husband/wife &hellip;</textarea>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label-bold" for="example-2">Example 2</label>
-        <textarea class="form-control form-control-3-4" rows="3" id="example-2" name="example-2">My husband/wife &hellip;</textarea>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label-bold" for="example-3">Example 3</label>
-        <textarea class="form-control form-control-3-4" rows="3" id="example-3" name="example-3">My husband/wife &hellip;</textarea>
-      </div>
-
-      <!-- add dynamic items here -->
-      <div id="form-items" aria-live="polite" aria-automic="false" aria-relevant="additions"></div>
-
-      <div class="form-group">
-        <button class="button button-secondary" id="add-form-item">Add another example</button>
-      </div>
-
-      <div class="form-group">
-        <button class="button" type="submit">Continue</button>
-      </div>
-
-    </form>
-
-  </div>
-  <!-- end -->
-
   {% markdown %}
-
-  ## When to use this pattern
-
-  Use this pattern for all XYZ.
-
-  ## Research for this pattern
-
-  Maybe a link to some research here with a brief explanation of why we&rsquo;re making this a pattern.
-
-  ## Related patterns
-
-  You may also want to use these:
-
-  * [Related link](#)
-  * [Another related link](#)
-  * [Add another link](#)
-
+    {% include "./docs.md" %}
   {% endmarkdown %}
 
 </main>
