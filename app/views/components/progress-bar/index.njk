@@ -1,6 +1,7 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/progress.njk" import progress_item %}
+{# {% from "macros/progress.njk" import progress_item %} #}
+{% from "macros/progress.njk" import reformProgress %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -30,26 +31,46 @@
   <!-- example -->
   <div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
-
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "", "Current") }}
-        {{ progress_item("Hearing booked") }}
-        {{ progress_item("Hearing") }}
-      </ol>
-
-    </div>
+    {{ reformProgress({
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          current: true
+        },
+        three: {
+          label: "Hearing booked"
+        },
+        four: {
+          label: "Hearing"
+        }
+      })
+    }}
 
   </div>
 
   <pre class="language-markup" data-title="Nunjucks">
     <code>
-    {%- raw %}
-    {{ progress_item("Appeal", "Complete") }}
-    {{ progress_item("DWP response", "", "Current") }}
-    {{ progress_item("Hearing booked") }}
-    {{ progress_item("Hearing") }}
+    {% raw %}
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          current: true
+        },
+        three: {
+          label: "Hearing booked"
+        },
+        four: {
+          label: "Hearing"
+        }
+      })
+    }}
     {% endraw %}
     </code>
   </pre>
@@ -58,26 +79,48 @@
   <!-- example -->
   <div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
-
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "Complete") }}
-        {{ progress_item("Hearing booked", "", "Current") }}
-        {{ progress_item("Hearing") }}
-      </ol>
-
-    </div>
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          complete: true
+        },
+        three: {
+          label: "Hearing booked",
+          current: true
+        },
+        four: {
+          label: "Hearing"
+        }
+      })
+    }}
 
   </div>
 
   <pre class="language-markup" data-title="Nunjucks">
     <code>
-    {%- raw %}
-    {{ progress_item("Appeal", "Complete") }}
-    {{ progress_item("DWP response", "Complete") }}
-    {{ progress_item("Hearing booked", "", "Current") }}
-    {{ progress_item("Hearing") }}
+    {% raw %}
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          complete: true
+        },
+        three: {
+          label: "Hearing booked",
+          current: true
+        },
+        four: {
+          label: "Hearing"
+        }
+      })
+    }}
     {% endraw %}
     </code>
   </pre>
@@ -86,26 +129,50 @@
   <!-- example -->
   <div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
-
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "Complete") }}
-        {{ progress_item("Hearing booked", "Complete") }}
-        {{ progress_item("Hearing", "", "Current") }}
-      </ol>
-
-    </div>
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          complete: true
+        },
+        three: {
+          label: "Hearing booked",
+          complete: true
+        },
+        four: {
+          label: "Hearing",
+          current: true
+        }
+      })
+    }}
 
   </div>
 
   <pre class="language-markup" data-title="Nunjucks">
     <code>
-    {%- raw %}
-    {{ progress_item("Appeal", "Complete") }}
-    {{ progress_item("DWP response", "Complete") }}
-    {{ progress_item("Hearing booked", "Complete") }}
-    {{ progress_item("Hearing", "", "Current") }}
+    {% raw %}
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          complete: true
+        },
+        three: {
+          label: "Hearing booked",
+          complete: true
+        },
+        four: {
+          label: "Hearing",
+          current: true
+        }
+      })
+    }}
     {% endraw %}
     </code>
   </pre>
@@ -114,26 +181,50 @@
   <!-- example -->
   <div class="example" data-title="Example">
 
-    <div class="progress" aria-label="Appeal process">
-
-      <ol class="progress-list">
-        {{ progress_item("Appeal", "Complete") }}
-        {{ progress_item("DWP response", "Complete") }}
-        {{ progress_item("Hearing booked", "Complete") }}
-        {{ progress_item("Hearing", "Complete") }}
-      </ol>
-
-    </div>
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          complete: true
+        },
+        three: {
+          label: "Hearing booked",
+          complete: true
+        },
+        four: {
+          label: "Hearing",
+          complete: true
+        }
+      })
+    }}
 
   </div>
 
   <pre class="language-markup" data-title="Nunjucks">
     <code>
-    {%- raw %}
-    {{ progress_item("Appeal", "Complete") }}
-    {{ progress_item("DWP response", "Complete") }}
-    {{ progress_item("Hearing booked", "Complete") }}
-    {{ progress_item("Hearing", "Complete") }}
+    {% raw %}
+    {{ reformProgress( {
+        one: {
+          label: "Appeal",
+          complete: true
+        },
+        two: {
+          label: "DWP response",
+          complete: true
+        },
+        three: {
+          label: "Hearing booked",
+          complete: true
+        },
+        four: {
+          label: "Hearing",
+          complete: true
+        }
+      })
+    }}
     {% endraw %}
     </code>
   </pre>

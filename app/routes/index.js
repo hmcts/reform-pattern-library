@@ -16,6 +16,15 @@ routes.get("/", function (req, res) {
 })
 
 
+routes.get("/macros", function (req, res) {
+  res.render("macros",
+    data = {
+      pageTitle : "Macros collection"
+    }
+  )
+})
+
+
 // add form items
 routes.get("/add-form-items", function (req, res) {
   res.render("add-form-items/index",

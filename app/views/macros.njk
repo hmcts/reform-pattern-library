@@ -1,0 +1,27 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+{% from "macros/input.njk" import reformInput %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <p class="lede">A collection of macro patterns.</p>
+
+    </div>
+
+  </div>
+
+  {{ reformInput(id="id", name="name", label="This is a label", type="text") }}
+
+</main>
+{% endblock %}

@@ -60,7 +60,12 @@ $module: "pattern-library";
     padding: $gutter-half;
     padding-top: 65px;
     position: relative;
-    white-space: pre-line;
+    tab-size: 4;
+    hyphens: none;
+  	white-space: pre;
+  	word-spacing: normal;
+  	word-break: normal;
+  	word-wrap: normal;
 
     &:before {
       background-color: $grey-3;
@@ -74,6 +79,8 @@ $module: "pattern-library";
       text-align: right;
       width: 100%;
     }
+
+  }
 
 
 }
