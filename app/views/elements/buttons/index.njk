@@ -1,6 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/button.njk" import button %}
+{% from "macros/buttons/macro.njk" import reformButton %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -23,45 +23,9 @@
 
   </div>
 
-
-  <!-- button primary -->
-  <h2 class="heading-medium">Primary button</h2>
-  <div class="example" data-title="Example">{{ button("Primary button", type="submit") }}</div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>{%- raw %}{{ button("Primary button", type="submit") }}{% endraw %}</code>
-  </pre>
-
-  <pre class="language-markup" data-title="HTML">
-    <code>&#x3C;button class=&#x22;button&#x22; type=&#x22;submit&#x22;&#x3E;Primary button&#x3C;/button&#x3E;</code>
-  </pre>
-
-
-  <!-- button secondary -->
-  <h2 class="heading-medium">Secondary button</h2>
-  <div class="example" data-title="Example">{{ button("Secondary button", style="secondary") }}</div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code class="prettyprint">{%- raw %}{{ button("Secondary button", style="secondary") }}{% endraw %}</code>
-  </pre>
-
-  <pre class="language-markup" data-title="HTML">
-    <code class="prettyprint">&#x3C;button class=&#x22;button button-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary button&#x3C;/button&#x3E;</code>
-  </pre>
-
-
-  <!-- button tertiary -->
-  <h2 class="heading-medium">Tertiary button</h2>
-  <div class="example" data-title="Example">{{ button("Tertiary button", style="tertiary") }}</div>
-
-  <pre class="language-markup" data-title="Nunjucks">
-    <code>{%- raw %}{{ button("Tertiary button", style="tertiary") }}{% endraw %}</code>
-  </pre>
-
-  <pre class="language-markup" data-title="HTML">
-    <code>&#x3C;button class=&#x22;button button-tertiary&#x22; type=&#x22;button&#x22;&#x3E;Tertiary button&#x3C;/button&#x3E;</code>
-  </pre>
-
+  {% markdown %}
+    {% include "./docs.md" %}
+  {% endmarkdown %}
 
 </main>
 {% endblock %}
