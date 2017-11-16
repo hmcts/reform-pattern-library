@@ -110,7 +110,7 @@ renderer.code = function (text, lang) {
       return "<pre class=\"language-markup\" data-title=\"HTML\"><code>" + text + "</code></pre>";
   }
   else if (lang == "example") {
-      return "<div class=\"example\" data-title=\"Example\">" + text + "</div>";
+      return "<div class=\"example\" data-title=\"Preview\">" + text + "</div>";
   }
 }
 
