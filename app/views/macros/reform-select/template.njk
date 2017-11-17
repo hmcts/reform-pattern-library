@@ -1,0 +1,17 @@
+<div class="form-group{% if error %} error{% endif %}">
+
+  <label for="{{id}}">
+    <span class="form-label-bold">{{label}}</span>
+    {% if hint %}<span class="form-hint">{{hint}}</span>{% endif %}
+    {% if error %}<span class="error-message">{{error}}</span> {% endif %}
+  </label>
+
+  <select class="form-control" id="{{id}}" name="{{name}}">
+    {% if placeholder %}<option>{{placeholder}}</option>{% endif %}
+    {% for option in options %}
+      <option value="{{ option.value }}"
+      {% if value == option.value %} selected{% endif %}>{{option.display}}</option>
+    {% endfor %}
+  </select>
+
+</div>

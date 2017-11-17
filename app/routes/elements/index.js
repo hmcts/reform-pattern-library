@@ -48,4 +48,16 @@ routes.get("/" + base + "/buttons", function (req, res) {
 })
 
 
+routes.get("/" + base + "/names", function (req, res) {
+  res.render(base + "/names/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Names",
+      pageStrapline: "A collection of name patterns."
+    }
+  )
+})
+
+
 module.exports = routes;
