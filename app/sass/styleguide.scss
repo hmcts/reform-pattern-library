@@ -41,11 +41,45 @@ $module: "pattern-library";
   }
 
 
+  .heading-contents {
+    margin-top: 3em;
+  }
+
+
+  .list-contents li {
+    @include core-16;
+  }
+
+
   pre {
     @include core-16;
-    border: 1px solid $border-colour;
-    margin: em(15) 0;
-    padding: em(15, 16);
+    border: 1px solid $grey-3;
+    font-family: Consolas, Monaco, "Andale Mono", monospace;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    padding: $gutter-half;
+    padding-top: 65px;
+    position: relative;
+    tab-size: 4;
+    hyphens: none;
+  	white-space: pre;
+  	word-spacing: normal;
+  	word-break: normal;
+  	word-wrap: normal;
+
+    &:before {
+      background-color: $grey-3;
+      box-sizing: border-box;
+      color: $grey-1;
+      content: attr(data-title);
+      display: block;
+      line-height: 1;
+      padding: $gutter-half;
+      position: absolute; top: 0; left: 0;
+      text-align: right;
+      width: 100%;
+    }
+
   }
 
 

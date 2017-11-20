@@ -7,18 +7,8 @@ var base = "elements";
 routes.get("/" + base, function (req, res) {
   res.render(base + "/index",
     data = {
-      pageTitle : "Elements"
-    }
-  )
-})
-
-
-routes.get("/" + base + "/buttons", function (req, res) {
-  res.render(base + "/buttons/index",
-    data = {
-      section : "elements",
-      sectionName : "Elements",
-      pageTitle : "Buttons"
+      pageTitle : "Elements",
+      pageStrapline: "A collection of elements for the Reform Programme."
     }
   )
 })
@@ -40,7 +30,31 @@ routes.get("/" + base + "/form-elements", function (req, res) {
     data = {
       section : "elements",
       sectionName : "Elements",
-      pageTitle : "Form elements"
+      pageTitle : "Form elements",
+      pageStrapline: "A collection of form patterns."
+    }
+  )
+})
+
+
+routes.get("/" + base + "/buttons", function (req, res) {
+  res.render(base + "/buttons/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Buttons"
+    }
+  )
+})
+
+
+routes.get("/" + base + "/names", function (req, res) {
+  res.render(base + "/names/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Names",
+      pageStrapline: "A collection of name patterns."
     }
   )
 })

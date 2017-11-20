@@ -1,1 +1,0 @@
-# Alpha and beta banners

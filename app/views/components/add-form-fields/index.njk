@@ -1,6 +1,6 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
-{% from "macros/reform-phase-banners/macro.njk" import reformPhaseBanner %}
+{% from "macros/reform-add-form-fields/macro.njk" import reformAddFormFields %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -17,7 +17,7 @@
 
       <h1 class="heading-xlarge">{{pageTitle}}</h1>
 
-      <p class="lede">For documentation, please go to <a href="https://govuk-elements.herokuapp.com/alpha-beta-banners" target="_blank">GOV Elements<span class="visually-hidden"> (opens in a new window)</span></a>.</p>
+      <p class="lede">{{pageStrapline}}</p>
 
     </div>
 

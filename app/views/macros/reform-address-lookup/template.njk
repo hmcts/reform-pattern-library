@@ -1,0 +1,55 @@
+  <form class="form" method="POST" data-js="postcode-lookup">
+
+    <fieldset>
+
+      <legend class="visually-hidden">Address</legend>
+
+      <div class="form-group form-group-related">
+
+        <label class="form-label-bold" for="postcode-lookup">Enter a UK postcode</label>
+
+        <div class="form-postcode">
+          <input class="form-control form-control-1-4" id="postcode-lookup" type="text"><button class="button" id="postcode-button" type="submit">Find address</button>
+        </div>
+
+      </div>
+
+      <div class="hidden" id="postcode-addresses" aria-live="assertive"></div>
+
+      <div class="hidden" id="manual-address" role="status" aria-live="polite">
+
+        <div class="form-group form-group-compound">
+          <label class="form-label" for="address-line-1">Building and street</label>
+          <input class="form-control form-control-2-3" id="address-line-1" name="addressLine1" type="text">
+        </div>
+
+        <div class="form-group form-group-compound">
+          <label class="visually-hidden" for="address-line-2">Building and street address line 2</label>
+          <input class="form-control form-control-2-3" id="address-line-2" name="addressLine2" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="visually-hidden" for="address-line-3">Building and street address line 3</label>
+          <input class="form-control form-control-2-3" id="address-line-3" name="addressLine3" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="town-or-city">Town or city</label>
+          <input class="form-control" id="town-or-city" name="townOrCity" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="county">County (optional)</label>
+          <input class="form-control" id="county" name="county" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="postcode">Postcode</label>
+          <input class="form-control form-control-1-4" id="postcode" name="postcode" type="text">
+        </div>
+
+      </div>
+
+    </fieldset>
+
+  </form>
