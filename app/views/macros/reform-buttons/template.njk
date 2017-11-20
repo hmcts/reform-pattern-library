@@ -1,1 +1,1 @@
-<button class="button{% if (style == 'secondary') %} button-secondary{% endif %}{% if (style == 'tertiary') %} button-tertiary{% endif %}" type="{{type}}">{{ label }}</button>
+<button class="button{% if (style == 'secondary') %} button-secondary{% endif %}{% if (style == 'tertiary') %} button-tertiary{% endif %}"{% if id %} id="{{id}}" {% endif %} type="{{type}}">{{ label }}</button>
