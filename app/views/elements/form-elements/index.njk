@@ -2,6 +2,9 @@
 {% extends "layout.njk" %}
 {% from "macros/reform-inputs/macro.njk" import reformInput %}
 {% from "macros/reform-radios/macro.njk" import reformRadios %}
+{% from "macros/reform-textarea/macro.njk" import reformTextarea %}
+{% from "macros/reform-select/macro.njk" import reformSelect %}
+{% from "macros/reform-date/macro.njk" import reformDate %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -18,7 +21,7 @@
 
       <h1 class="heading-xlarge">{{pageTitle}}</h1>
 
-      <p class="lede">{{pageStrapline}}</p>
+      <p class="lede">For documentation, please go to <a href="https://govuk-elements.herokuapp.com/form-elements" target="_blank">GOV Elements<span class="visually-hidden"> (opens in a new window)</span></a>.</p>
 
     </div>
 

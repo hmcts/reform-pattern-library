@@ -3,13 +3,14 @@
   REFORM SELECTS
 
   label       - sets the text label
-  id          - sets the base if for each label
+  id          - sets the base id for each label
   name        - sets the name of the select
   hint        - sets hint text within the label
   error       - sets the error message within the label
   placeholder - sets the first option to this text
   options     - object of values to generate options in the select
   value       - sets the select to selected when matched
+  classes     - 
 
   HOW TO USE
 
@@ -36,6 +37,6 @@
 
 #}
 
-{% macro reformSelect(label="", id="", name="", hint="", error="", placeholder="", options="", value="") %}
+{% macro reformSelect(label="", id="", name="", hint="", error="", placeholder="", options="", value="", classes="") %}
   {% include "./template.njk" %}
 {% endmacro %}
