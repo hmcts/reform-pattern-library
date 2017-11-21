@@ -31,7 +31,7 @@ routes.get("/" + base + "/form-elements", function (req, res) {
       section : "elements",
       sectionName : "Elements",
       pageTitle : "Form elements",
-      pageStrapline: "A collection of form patterns."
+      pageStrapline: "A collection of reusable form elements."
     }
   )
 })

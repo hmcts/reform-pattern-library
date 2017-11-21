@@ -1,8 +1,8 @@
 <div class="form-group{% if error %} error{% endif %}">
   <label for="{{id}}">
-    <span class="form-label-bold">{{label}}</span>
+    <span class="{% if classes.label %}{{ classes.label }}{% else %}form-label-bold{% endif %}">{{label}}</span>
     {% if hint %}<span class="form-hint">{{hint}}</span>{% endif %}
     {% if error %}<span class="error-message">{{error}}</span>{% endif %}
   </label>
-  <input class="form-control" id="{{id}}" name="{{name}}" type="{{type}}"{% if value %} value="{{value}}"{% endif %}>
+  <input class="form-control{% if classes.input %} {{ classes.input }}{% endif %}" id="{{id}}" name="{{name}}" type="{{type}}"{% if value %} value="{{value}}"{% endif %}>
 </div>

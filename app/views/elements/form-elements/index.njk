@@ -1,6 +1,7 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
 {% from "macros/reform-inputs/macro.njk" import reformInput %}
+{% from "macros/reform-radios/macro.njk" import reformRadios %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -24,7 +25,7 @@
   </div>
 
   {% markdown %}
-    {% include "./docs.md" %}
+    {% include "./README.md" %}
   {% endmarkdown %}
 
 </main>

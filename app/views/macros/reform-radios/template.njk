@@ -1,0 +1,20 @@
+<div class="form-group{% if error %} error{% endif %}"{% if id %} id="{{id}}"{% endif %}>
+  
+  <fieldset{% if radioButtons.length < 3 %} class="inline"{% endif %}>
+
+    <legend>
+       <span class="{% if classes.legend %}{{ classes.legend }}{% else %}form-label-bold{% endif %}">{{legend}}</span>
+       {% if error %}<span class="error-message">{{error}}</span> {% endif %}
+       {% if hint %}<span class="form-hint">{{hint}}</span>{% endif %}
+     </legend>
+
+    {% for radio in radioButtons %}
+    <div class="multiple-choice"{% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
+      <input id="{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}"{% if value == radio.value %} checked{% endif %}>
+      <label for="{{radio.id}}">{{radio.label}}</label>
+    </div>
+    {% endfor %}
+
+  </fieldset>
+
+</div>
