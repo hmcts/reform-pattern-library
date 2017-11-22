@@ -121,6 +121,10 @@ $module: "task-list";
         
       }
       
+      a {
+        text-decoration: none;
+      }
+      
       &--required {
         font-weight: bold;
       }
