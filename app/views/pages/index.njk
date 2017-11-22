@@ -1,0 +1,167 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+  
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      
+      <h1 class="heading-xlarge">Get a divorce: step by step</h1>
+      
+      <p>How to file for divorce if you’re in England or Wales. </p>
+      
+      <p>There is a different process if you’re <a href="#">responding to a divorce petition</a>, or if you’re in <a href="#">Scotland</a> or <a href="#">Northern Ireland</a>.</p>
+
+      <div class="task-list" data-js="task-list">
+
+        <ol class="task-list__list">
+
+          <li class="task-list__item">
+            
+            <div class="task-list__step">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="1">1. </span>Check if you can get divorced</h2>
+              </div>
+              
+              <div class="task-list__panel">
+                
+                <p>Your marriage must meet certain legal requirements in order for you to be able to get a divorce.</p>
+                
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">Check your marriage meets the criteria</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+            
+            <div class="task-list__step task-list__step--optional">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="2">2. </span>Make arrangements for your children, money and property</h2>
+              </div>
+              
+              <div class="task-list__panel">
+              
+                <p>You should try to agree how you’ll deal with your children, money and property before you start your divorce.</p>
+              
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">Make arrangements for your children</a></li>
+                  <li><a href="#">Divide your money and property</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+          
+            <div class="task-list__step">
+            
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="3">3. </span>File for divorce</h2>
+              </div>
+              
+              <div class="task-list__panel">
+          
+                <p>You need to fill in a divorce petition form.</p>
+          
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">How to start the divorce process</a></li>
+                  <li><a href="#">Check the list of reasons why you can get a divorce</a></li>
+                  <li><a href="#">Fill in the divorce petition form</a></li>
+                  <li><a href="#">Pay the fee &pound;550</a></li>
+                  <li><a href="#">Get help with court fees</a></li>
+                  <li><a href="#">Send copies of the form to your nearest divorce centre</a></li>
+                </ul>
+              
+                <p>Your husband or wife will receive a copy of the petition. You'll be told when they respond and what you’ll need to do next.</p>
+              
+                <p>You might need to get legal advice if your husband or wife disagrees with your divorce petition.</p>
+                
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">Find a legal adviser</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+            
+            <div class="task-list__step">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="4">4. </span>Send the court more details about your divorce</h2>
+              </div>
+              
+              <div class="task-list__panel">
+              
+                <p>If the court agrees with your divorce petition, you can apply for a &lsquo;decree nisi&rsquo; and give more information about why the marriage has broken down.</p>
+              
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">Why you need a decree nisi</a></li>
+                  <li><a href="#">Fill in the application form</a></li>
+                </ul>
+              
+                <p>You need to confirm why you’re getting a divorce. Choose the form that matches what you put in the divorce petition:</p>
+                
+                <ul class="list list-bullet task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">unreasonable behaviour</a></li>
+                  <li><a href="#">adultery</a></li>
+                  <li><a href="#">desertion</a></li>
+                  <li><a href="#">2 years’ separation</a></li>
+                  <li><a href="#">5 years’ separation</a></li>
+                </ul>
+                
+                <p>Send the forms to the court.</p>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+          
+            <div class="task-list__step">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="5">5. </span>Finalise your divorce</h2>
+              </div>
+              
+              <div class="task-list__panel">
+                <p>Once you, your husband or wife, and the court all agree, you can apply for a &lsquo;decree absolute&rsquo; to end your marriage. You can do this 6 weeks to 12 months after you receive the conditional order.</p>
+              </div>
+              
+            </div>
+            
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

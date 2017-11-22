@@ -3,6 +3,7 @@ const routes = require("express").Router();
 
 routes.use("/", require("./elements"))
 routes.use("/", require("./components"))
+routes.use("/", require("./pages"))
 
 
 routes.get("/", function (req, res) {

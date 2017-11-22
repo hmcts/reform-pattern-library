@@ -1,0 +1,148 @@
+/*
+Task list
+!!!! NOT READY YET - Quick mockup for demo purposes !!!!
+*/
+
+
+$module: "task-list";
+
+.#{$module} {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  &__step {
+    margin-top: -30px;
+    position: relative;
+    
+    &::before {
+      content: "";
+      border-left: 3px solid $grey-2;
+      height: 100%;
+      position: absolute; left: -46px; top: 30px;
+      width: 0;
+    }
+    
+    &--optional {
+      
+      &::before {
+        border-left: 3px dotted $grey-2;
+      }
+      
+    }
+    
+  }
+  
+  
+  &__item {
+    padding-bottom: 30px;
+    padding-left: 60px;
+    position: relative;
+
+    &:first-child {
+      
+      .#{$module}__step {
+        margin-top: 0;
+      }
+      
+    }
+
+    
+    &:last-child {
+      padding-bottom: 0;
+      
+      &::after {
+        background-color: $grey-2;
+        content: "";
+        height: 3px;
+        position: absolute; bottom: 0; left: 8px;
+        width: 16px;
+      }
+      
+      .#{$module}__step {
+        
+        &::before {
+          top: 0;
+        }
+        
+      }
+      
+    }
+    
+        
+  }
+
+
+  &__number {
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 3px solid $grey-2;
+    border-radius: 50%;
+    font-weight: 700;
+    overflow: hidden;
+    position: absolute; left: -60px; top: -2px;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    z-index: 2;
+    
+    &::before {
+      content: attr(data-number);
+      display: block;
+      font-size: 19px;
+      font-weight: bold;
+      height: 26px;
+      line-height: 28px; // subtle tweak for alignment
+      width: 26px;
+    }
+    
+  }
+  
+  
+  &__header {
+    border-top: 2px solid $grey-3;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  
+  &__panel {
+    padding-bottom: 30px;
+    
+    &-links {
+      margin-bottom: 20px;
+      margin-top: 0;
+      
+      li {
+        padding-bottom: 10px;
+        
+        &:last-child {
+          padding-bottom: 0;
+        }
+        
+      }
+      
+      &--required {
+        font-weight: bold;
+      }
+      
+    }
+    
+    p {
+      margin-top: 0;
+    }
+    
+    :last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+  }
+  
+  
+  &__title {
+    @include bold-24();
+    position: relative;
+  }
+
+
+}
