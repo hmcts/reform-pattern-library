@@ -1,31 +1,30 @@
 /*
 Task list
-!!!! NOT READY YET - Quick mockup for demo purposes !!!!
 */
-
 
 $module: "task-list";
 
 .#{$module} {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: em(20);
+  padding-bottom: em(20);
+  
   
   &__step {
-    margin-top: -30px;
+    margin-top: - em(30, 16);
     position: relative;
     
     &::before {
       content: "";
-      border-left: 3px solid $grey-2;
+      border-left: 2px solid $grey-2;
       height: 100%;
-      position: absolute; left: -46px; top: 30px;
+      left: - em(31, 16);
+      position: absolute; 
+      top: em(30);
       width: 0;
-    }
-    
-    &--optional {
       
-      &::before {
-        border-left: 3px dotted $grey-2;
+      @include media (tablet) {
+        border-width: 3px;
+        left: - em(46);
       }
       
     }
@@ -34,9 +33,13 @@ $module: "task-list";
   
   
   &__item {
-    padding-bottom: 30px;
-    padding-left: 60px;
+    padding-bottom: em(30, 16);
+    padding-left: em(45, 16);
     position: relative;
+    
+    @include media (tablet) {
+      padding-left: em(60);
+    }
 
     &:first-child {
       
@@ -52,9 +55,11 @@ $module: "task-list";
       
       &::after {
         background-color: $grey-2;
+        bottom: 0;
         content: "";
         height: 3px;
-        position: absolute; bottom: 0; left: 8px;
+        left: 8px;
+        position: absolute;
         width: 16px;
       }
       
@@ -70,29 +75,38 @@ $module: "task-list";
     
         
   }
-
+  
 
   &__number {
-    background-color: #fff;
+    background-color: $page-colour;
     box-sizing: border-box;
-    border: 3px solid $grey-2;
+    border: 2px solid $grey-2;
     border-radius: 50%;
     font-weight: 700;
-    overflow: hidden;
-    position: absolute; left: -60px; top: -2px;
-    text-align: center;
     height: 32px;
+    overflow: hidden;
+    position: absolute; left: -46px; top: 11px;
+    text-align: center;
     width: 32px;
     z-index: 2;
     
+    @include media (tablet) {
+      border-width: 3px;
+      top: 30px; left: -60px;
+    }
+    
     &::before {
+      @include bold-19;
       content: attr(data-number);
       display: block;
-      font-size: 19px;
-      font-weight: bold;
       height: 26px;
-      line-height: 28px; // subtle tweak for alignment
+      line-height: 30px;
       width: 26px;
+    
+      @include media (tablet) {
+        line-height: 28px;
+      }
+    
     }
     
   }
@@ -100,13 +114,28 @@ $module: "task-list";
   
   &__header {
     border-top: 2px solid $grey-3;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: $gutter-half;
+    padding-bottom: $gutter-half;
+    
+    @include media (tablet) {
+      padding-top: $gutter;
+      padding-bottom: $gutter;
+    }
+    
+  }
+  
+  
+  &__title {
+    @include bold-24();
   }
   
   
   &__panel {
-    padding-bottom: 30px;
+    padding-bottom: $gutter-half;
+    
+    @include media (tablet) {
+      padding-bottom: $gutter;
+    }
     
     &-links {
       margin-bottom: 20px;
@@ -142,11 +171,59 @@ $module: "task-list";
     
   }
   
+
+}
+
+
+/*
+Task list (JavaScript only)
+*/
+
+$module: "task-list";
+
+.js-enabled .#{$module} {  
   
-  &__title {
+  
+  &__header {
+    cursor: pointer;
+    
+    .#{$module}__toggle {
+      @include core-16();
+      color: $link-colour;
+      display: block;
+      text-align: left;      
+    }
+    
+    &:hover {
+    
+      .#{$module}__toggle {
+        text-decoration: underline;    
+      }
+      
+      .#{$module}__button {
+        color: $link-colour;   
+      }
+      
+    }
+
+  }
+  
+  
+  &__button {
     @include bold-24();
-    position: relative;
+    background-color: transparent;
+    border: 0 none; 
+    cursor: pointer;   
+    display: block;
+    padding: 0;
+    
+    // fix unwanted button padding in firefox
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+    
   }
 
-
+  
 }
