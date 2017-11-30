@@ -36,7 +36,7 @@
     "gulp-util": "^3.0.8",
     "marked": "^0.3.6",
     "node-sass": "^4.5.3",
-    "nunjucks": "^3.0.1",
+    "nunjucks": "git+https://git@github.com/gonogo/nunjucks.git",
     "nunjucks-markdown": "^2.0.1",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.2.0"
