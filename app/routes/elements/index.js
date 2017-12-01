@@ -60,4 +60,16 @@ routes.get("/" + base + "/names", function (req, res) {
 })
 
 
+routes.get("/" + base + "/confirmation", function (req, res) {
+  res.render(base + "/confirmation/index",
+    data = {
+      section : "elements",
+      sectionName : "Elements",
+      pageTitle : "Confirmation",
+      pageStrapline: "A confirmation or success pattern."
+    }
+  )
+})
+
+
 module.exports = routes;
