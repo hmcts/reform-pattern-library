@@ -1,9 +1,10 @@
-const path     = require("path")
-const express  = require("express")
-const session  = require("express-session")
-const nunjucks = require("nunjucks")
-const markdown = require("nunjucks-markdown")
-const marked   = require("marked")
+const sslRedirect = require("heroku-ssl-redirect");
+const path        = require("path")
+const express     = require("express")
+const session     = require("express-session")
+const nunjucks    = require("nunjucks")
+const markdown    = require("nunjucks-markdown")
+const marked      = require("marked")
 
 const IS_HEROKU = process.env.hasOwnProperty('IS_HEROKU')
 
@@ -17,6 +18,10 @@ const bodyParser = require("body-parser")
 const app = express()
 
 module.exports = app
+
+
+// enable ssl redirect
+app.use(sslRedirect())
 
 
 // application settings
