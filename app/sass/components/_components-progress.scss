@@ -71,7 +71,7 @@ $module: "progress";
 
     &--complete {
 
-      .#{$module}-icon {
+      .#{$module}__icon {
 
         &::before {
           background-image: file-url("icons/icon-progress-tick.svg"); // if less than ie9 provide png fallback (TODO)
