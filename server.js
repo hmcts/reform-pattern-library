@@ -76,10 +76,10 @@ app.locals = locals
 
 
 // routes
-app.use("/", routes);
+app.use("/", routes)
 
 
-var renderer = new marked.Renderer();
+var renderer = new marked.Renderer()
 
 
 // headings
@@ -141,11 +141,11 @@ marked.setOptions({
   sanitize: true,
   smartLists: true,
   smartypants: false
-});
+})
 
 
 // markdown register
-markdown.register(nunjucksAppEnv, marked);
+markdown.register(nunjucksAppEnv, marked)
 
 
 // start app and listen
