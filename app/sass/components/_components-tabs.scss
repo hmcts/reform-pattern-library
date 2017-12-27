@@ -2,13 +2,12 @@
 Tabs
 */
 
-
 $module: "tabs";
 
 .#{$module} {
 
   // global treatment
-  &-toggle {
+  &__toggle {
     display: block;
     padding: 10px 15px;
 
@@ -22,13 +21,13 @@ $module: "tabs";
   // mobile
   @include media (mobile) {
 
-    &-list {
+    &__list {
       border-bottom: 1px solid $border-colour;
       margin-left: - 15px;
       margin-right: - 15px;
     }
 
-    &-toggle {
+    &__toggle {
       border-top: 1px solid $border-colour;
 
       &:focus {
@@ -43,30 +42,29 @@ $module: "tabs";
   // tablet and above
   @include media(tablet) {
 
-    &-panel {
+    &__panel {
       border-top: 1px solid $border-colour;
       clear: both;
       overflow: hidden;
     }
 
-    &-list {
+    &__list {
       float: left;
-
-      &-item {
-        float: left;
-        position: relative; bottom: -1px;
-      }
-
+    }
+    
+    &__item {
+      float: left;
+      position: relative; bottom: -1px;
     }
 
-    &-toggle {
+    &__toggle {
       background-color: $grey-3;
       border: 1px solid transparent;
       float: left;
       margin: 6px 6px 6px 0;
       text-decoration: none;
 
-      &-selected,
+      &--selected,
       &[aria-selected=true] {
         background-color: $white;
         border-bottom: 0;

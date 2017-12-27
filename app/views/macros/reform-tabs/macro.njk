@@ -1,3 +1,27 @@
-{% macro reformTabs() %}
-  {% include "./template.njk" %}
-{% endmacro %}
+{%- macro list() -%}
+    <ul class="tabs__list">{{ caller() }}</ul>
+{%- endmacro -%}
+
+{%- macro content() -%}
+    <div class="tabs__content">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro link(text, panelId) -%}
+    <a class="tabs__toggle" href="#{{ panelId }}">{{ text }}</a>
+{%- endmacro -%}
+
+{%- macro selectedLink(text, panelId) -%}
+    <a class="tabs__toggle tabs__toggle--selected" href="#{{ panelId }}">{{ text }}</a>
+{%- endmacro -%}
+
+{%- macro item(text, panelId) -%}
+    <li class="tabs__item">{{ link(text, panelId) }}</li>
+{%- endmacro -%}
+
+{%- macro selectedItem(text, panelId) -%}
+    <li class="tabs__item">{{ selectedLink(text, panelId) }}</li>
+{%- endmacro -%}
+
+{%- macro panel(id) -%}
+    <div class="tabs__panel" id="{{ id }}">{{ caller() }}</div>
+{%- endmacro -%}
