@@ -17,21 +17,21 @@ $module: "progress";
     width: 100%;
   }
 
-  &-list {
-    font-size: 0.1px; // hide whitespace between elements
+  &__list {
+    font-size: .1px; // hide whitespace between elements
     position: relative;
     text-align: justify;
     vertical-align: top;
 
     &::after {
-      content: '';
+      content: "";
       display: inline-block;
       width: 100%;
     }
 
   }
 
-  &-icon {
+  &__icon {
     display: block;
     height: 32px;
     margin-left: auto;
@@ -53,7 +53,7 @@ $module: "progress";
 
   }
 
-  &-label {
+  &__label {
     @include core-16;
     display: block;
     margin-top: 10px;
@@ -61,7 +61,7 @@ $module: "progress";
     z-index: 2;
   }
 
-  &-item {
+  &__item {
     @include core-19;
     display: inline-block;
     max-width: 20%;
@@ -69,7 +69,7 @@ $module: "progress";
     text-align: center;
     vertical-align: top;
 
-    &-complete {
+    &--complete {
 
       .#{$module}-icon {
 
@@ -84,9 +84,9 @@ $module: "progress";
 
     }
 
-    &-current {
+    &--current {
 
-      .#{$module}-label {
+      .#{$module}__label {
         font-weight: bold;
       }
 
@@ -96,7 +96,7 @@ $module: "progress";
     &:last-child {
       position: relative;
 
-      .#{$module}-icon {
+      .#{$module}__icon {
         position: relative;
 
         &::after {
@@ -115,9 +115,9 @@ $module: "progress";
 
     &:last-child {
 
-      .#{$module}-icon::after {
-        right: auto;
+      .#{$module}__icon::after {
         left: 16px;
+        right: auto;
       }
 
     }

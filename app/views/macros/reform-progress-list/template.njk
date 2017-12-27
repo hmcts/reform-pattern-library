@@ -1,11 +1,11 @@
 <div class="progress">
 
-  <ol class="progress-list">
+  <ol class="progress__list">
 
     {% for progress, item in items %}
-    <li class="progress-item{% if (item.complete == true) %} progress-item-complete{% endif %}{% if (item.current == true) %} progress-item-current{% endif %}">
-      <i class="progress-icon">{% if (item.complete == true) %}<span class="visually-hidden">Complete</span>{% endif %}</i>
-      <span class="progress-label">{{item.label}}</span>
+    <li class="progress__item{% if (item.complete == true) %} progress__item--complete{% endif %}{% if (item.current == true) %} progress__item--current{% endif %}">
+      <i class="progress__icon">{% if (item.complete == true) %}<span class="visually-hidden">Complete</span>{% endif %}</i>
+      <span class="progress__label">{{item.label}}</span>
     </li>
     {% endfor %}
 
