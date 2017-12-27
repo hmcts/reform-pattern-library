@@ -1,4 +1,4 @@
-  <form class="form" method="POST" data-js="postcode-lookup">
+  <form class="form" method="POST" data-js="address-lookup">
 
     <fieldset>
 
@@ -6,17 +6,18 @@
 
       <div class="form-group form-group-related">
 
-        <label class="form-label-bold" for="postcode-lookup">Enter a UK postcode</label>
+        <label class="form-label-bold" for="address-lookup">Enter a UK postcode</label>
 
-        <div class="form-postcode">
-          <input class="form-control form-control-1-4" id="postcode-lookup" type="text"><button class="button" id="postcode-button" type="submit">Find address</button>
+        <div class="address-lookup">
+          <input class="address-lookup__form-control form-control form-control-1-4" id="address-lookup-form-control" name="addressLookupFormControl" type="text">
+          <button class="button" id="address-lookup-button" type="submit">Find address</button>
         </div>
 
       </div>
 
-      <div class="hidden" id="postcode-addresses" aria-live="assertive"></div>
+      <div class="hidden" id="address-lookup-addresses" aria-live="assertive"></div>
 
-      <div class="hidden" id="manual-address" role="status" aria-live="polite">
+      <div class="hidden" id="address-lookup-manual-address" role="status" aria-live="polite">
 
         <div class="form-group form-group-compound">
           <label class="form-label" for="address-line-1">Building and street</label>
