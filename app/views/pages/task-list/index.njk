@@ -1,0 +1,177 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+  
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      
+      <h1 class="heading-xlarge">Application Journey</h1>
+      
+      <p>This journey is typically used when apply for a government service.</p>
+      
+      <div class="task-list" data-js="task-list">
+
+        <ol class="task-list__list">
+
+          <li class="task-list__item">
+            
+            <div class="task-list__step" id="start-page">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="1">1. </span>Start page<span class="task-list__toggle" aria-hidden="true"> Show</span></h2>
+              </div>
+              
+              <div class="task-list__panel js-hidden">
+                
+                <p>Always begin with a start page to orient the user. Explain what they’re here to do and what they’ll need in order to do it.</p>
+              
+                <p>If the application is part of a longer process involving multiple steps, use a <a href="#">Progress Bar</a> and consider using the <a href="#">Task List</a> patterns.</p>
+                
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">View documentation</a></li>
+                  <li><a href="#">View example</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+            
+            <div class="task-list__step" id="screening-questions">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="2">2. </span>Screening questions<span class="task-list__toggle"> Show</span></h2>
+              </div>
+              
+              <div class="task-list__panel js-hidden">
+              
+                <p>Ask screening questions to find out if the user is not eligible, or doesn’t have what they’ll need in order to complete the application.</p>
+                
+                <p>These questions follow the <a href="#">Question</a> pattern.</p>
+              
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">View documentation</a></li>
+                  <li><a href="#">View example</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+          
+            <div class="task-list__step" id="questions">
+            
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="3">3. </span>Questions<span class="task-list__toggle"> Show</span></h2>
+              </div>
+              
+              <div class="task-list__panel js-hidden">
+          
+                <p>Ask questions to establish the information you need for the application. Keep each page focused on asking about one thing. If you have a very large number of questions, consider using the <a href="#">Task List</a> pattern if testing indicates users are getting fatigued. </p>
+                <p>Questions follow the <a href="#">Question</a> pattern.
+                
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">View documentation</a></li>
+                  <li><a href="#">View example</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+            
+            <div class="task-list__step" id="check-your-answers-page">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="4">4. </span>Check your answers page<span class="task-list__toggle"> Show</span></h2>
+              </div>
+              
+              <div class="task-list__panel js-hidden">
+              
+                <p>Present the user with the answers to their questions, and ask them to sign a <a href="#">Statement of Truth</a></p>
+              
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">View documentation</a></li>
+                  <li><a href="#">View example</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+          <li class="task-list__item">
+          
+            <div class="task-list__step" id="payment">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="5">5. </span>Payment<span class="task-list__toggle"> Show</span></h2>
+              </div>
+              
+              <div class="task-list__panel js-hidden">
+                
+                <p>Hand the user to the GOV.UK Pay service.</p>
+                
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">View documentation</a></li>
+                  <li><a href="#">View example</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+          
+          <li class="task-list__item">
+          
+            <div class="task-list__step" id="done">
+              
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="6">6. </span>Done page<span class="task-list__toggle"> Show</span></h2>
+              </div>
+              
+              <div class="task-list__panel js-hidden">
+              
+                <p>Confirm the transaction is complete. Tell the user what to do next. Give them a <a href="#">Reference Number</a></p>
+              
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="#">View documentation</a></li>
+                  <li><a href="#">View example</a></li>
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}
