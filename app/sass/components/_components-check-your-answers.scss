@@ -1,0 +1,89 @@
+/*
+Check your answers
+*/
+
+
+.check-your-answers {
+  
+  @include media(desktop) {
+    display: table;
+    
+    &--short,
+    &--long {
+      width: 100%;
+    }
+    
+    // recommended for mostly short questions
+    &--short {
+      
+      .check-your-answers__question {
+        width: 30%;
+      }
+      
+    }
+    
+    // recommended for mostly long questions
+    &--long {
+        
+      .check-your-answers__question {
+        width: 50%;
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+.check-your-answers__row {
+  border-bottom: 1px solid $border-colour;
+  position: relative;
+  
+  @include media(desktop) {
+    border-bottom-width: 0;
+    display: table-row;
+  }
+  
+  > * {    
+    display: block;
+
+    @include media(desktop) {
+      border-bottom: 1px solid $border-colour;
+      display: table-cell;
+      margin: 0;
+      padding: em(12, 19) em(20, 19) em(9, 19) 0; // copied from Elements' td padding
+    }
+    
+  }
+  
+  @include media(desktop) {
+    &:first-child > * {
+      padding-top: 0;
+    }
+  }
+
+}
+
+
+.check-your-answers__question {
+  font-weight: bold;
+  margin: em(12, 19) 4em em(4,19) 0;
+}
+
+
+.check-your-answers__answer {
+  padding-bottom: em(9, 19);
+}
+
+
+.check-your-answers__change {
+  position: absolute; right: 0; top: 0;
+  text-align: right;
+
+  @include media(desktop) {
+    padding-right: 0;
+    position: static;
+  }
+  
+}

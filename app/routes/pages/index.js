@@ -13,4 +13,13 @@ routes.get("/" + base, function (req, res) {
 })
 
 
+routes.get("/" + base + "/check-your-answers", function (req, res) {
+  res.render(base + "/check-your-answers/index",
+    data = {
+      pageTitle : "Check your answers"
+    }
+  )
+})
+
+
 module.exports = routes;
