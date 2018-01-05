@@ -5,15 +5,15 @@
 
 
   // check if element exists
-  var element = document.querySelector("[data-js=postcode-lookup]");
+  var element = document.querySelector("[data-js=address-lookup]");
   if (!element) return;
 
 
   // get elements
-  var postcodeButton = document.getElementById("postcode-button");
-  var postcodeLookup = document.getElementById("postcode-lookup");
-  var postcodeAddresses = document.getElementById("postcode-addresses");
-  var manualAddress = document.getElementById("manual-address");
+  var addressLookup = document.getElementById("address-lookup-form-control");
+  var addressLookupButton = document.getElementById("address-lookup-button");
+  var addressLookupAddresses = document.getElementById("address-lookup-addresses");
+  var addressLookupManualAddress = document.getElementById("address-lookup-manual-address");
 
   var addressLine1 = document.getElementById("address-line-1");
   var addressLine2 = document.getElementById("address-line-2");
@@ -50,8 +50,8 @@
         county.value = null;
         postcode.value = null;
 
-        manualAddress.className = "hidden";
-        postcodeAddresses.className = "hidden";
+        addressLookupManualAddress.className = "hidden";
+        addressLookupAddresses.className = "hidden";
 
     }
 
@@ -84,36 +84,36 @@
         var content = "";
 
         var addresses = arr.filter(function(el, index, arr) {
-            return el.postcode === formatPostcode(postcodeLookup.value);
+            return el.postcode === formatPostcode(addressLookup.value);
         });
 
 
         // perform checks
-        if ( postcodeLookup.value === "" ) {
+        if ( addressLookup.value === "" ) {
 
           console.log("Postcode field is empty");
 
-        } else if ( isValidPostcode(postcodeLookup.value) === false ) {
+        } else if ( isValidPostcode(addressLookup.value) === false ) {
 
           console.log("Postcode field is not valid");
 
-        } else if ( isValidPostcode(postcodeLookup.value) === true && addresses.length < 1 ) {
+        } else if ( isValidPostcode(addressLookup.value) === true && addresses.length < 1 ) {
 
           console.log("Postcode field has a valid postcode but no records returned");
 
-          postcodeAddresses.className = "";
+          addressLookupAddresses.className = "";
 
           content += "<p>No addresses found.</p>";
 
-          postcodeAddresses.innerHTML = content;
+          addressLookupAddresses.innerHTML = content;
 
-        } else if ( isValidPostcode(postcodeLookup.value) === true && addresses.length > 1 ) {
+        } else if ( isValidPostcode(addressLookup.value) === true && addresses.length > 1 ) {
 
-          postcodeAddresses.className = "";
+          addressLookupAddresses.className = "";
 
           content += "<div class=\"form-group\">" +
-                     "<label class=\"form-label-bold\" for=\"postcode-select\">Select an address</label>" +
-                     "<select class=\"form-control form-control-3-4\" id=\"postcode-select\" name=\"postcodeSelect\">" +
+                     "<label class=\"form-label-bold\" for=\"address-lookup-options\">Select an address</label>" +
+                     "<select class=\"form-control form-control-3-4\" id=\"address-lookup-options\" name=\"addressLookupOptions\">" +
                      "<option>" + addresses.length + " addresses found</option>";
 
           for (i = 0; i < addresses.length; i++) {
@@ -123,7 +123,7 @@
           content += "</select>" +
                      "</div>";
 
-          postcodeAddresses.innerHTML = content;
+          addressLookupAddresses.innerHTML = content;
 
         }
 
@@ -133,17 +133,17 @@
     // filter by postcode and array index
     function addressFilter() {
 
-        var selectedIndex = document.getElementById("postcode-select").selectedIndex;
+        var selectedIndex = document.getElementById("address-lookup-options").selectedIndex;
 
         var address = arr.filter(function(el, index, arr) {
-            return el.postcode === formatPostcode(postcodeLookup.value);
+            return el.postcode === formatPostcode(addressLookup.value);
         });
 
         if (selectedIndex > 0) {
 
             selectedIndex --;
 
-            manualAddress.className = "";
+            addressLookupManualAddress.className = "";
 
             // populate address fields
             addressLine1.value = (address[selectedIndex].building_name || address[selectedIndex].building_number);
@@ -166,8 +166,8 @@
 
 
     // event listeners
-    postcodeButton.addEventListener("click", postcodeFilter, false);
-    postcodeAddresses.addEventListener("change", addressFilter, false);
+    addressLookupButton.addEventListener("click", postcodeFilter, false);
+    addressLookupAddresses.addEventListener("change", addressFilter, false);
 
 
 }

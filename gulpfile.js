@@ -62,7 +62,7 @@ gulp.task("default", function() {
 
   gutil.log(("The following main ") + cyan("tasks") + (" are available:"))
 
-  gutil.log(cyan("clean")   + ": Removes public, reports, screenshots and log files")
+  gutil.log(cyan("clean")   + ": Removes public")
   gutil.log(cyan("build")   + ": Copy assets to public, validate html")
   gutil.log(cyan("develop") + ": Set up watch and serve")
 

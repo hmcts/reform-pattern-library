@@ -1,0 +1,19 @@
+/*
+Address lookup
+*/
+
+$module: "address-lookup";
+
+.#{$module} {
+
+  &__form-control {
+    margin-bottom: em(10);
+    padding-bottom: em(5);
+
+    @include media(tablet) {
+      margin-right: em(10);
+      margin-bottom: 0;
+    }
+  }
+
+}

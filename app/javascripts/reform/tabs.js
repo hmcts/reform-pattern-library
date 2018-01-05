@@ -12,9 +12,9 @@
   // a temporary value to cache what we're about to show
   var target = null;
 
-  var tabsList = document.querySelectorAll(".tabs-list")[0];
-  var tabs     = document.querySelectorAll(".tabs-toggle");
-  var panels   = document.querySelectorAll(".tabs-panel");
+  var tabsList = document.querySelectorAll(".tabs__list")[0];
+  var tabs     = document.querySelectorAll(".tabs__toggle");
+  var panels   = document.querySelectorAll(".tabs__panel");
 
 
   // collect all tabs
@@ -89,7 +89,7 @@
       var match = el.hash === id;
 
       // Conditional (ternary) operator
-      el.classList[match ? "add" : "remove"]("tabs-toggle-selected");
+      el.classList[match ? "add" : "remove"]("tabs__toggle--selected");
       el.setAttribute("aria-selected", match);
     });
 
