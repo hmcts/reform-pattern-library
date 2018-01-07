@@ -1,0 +1,36 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+{% from "macros/reform-inputs/macro.njk" import reformInput %}
+{% from "macros/reform-radios/macro.njk" import reformRadios %}
+{% from "macros/reform-textarea/macro.njk" import reformTextarea %}
+{% from "macros/reform-select/macro.njk" import reformSelect %}
+{% from "macros/reform-date/macro.njk" import reformDate %}
+{% from "macros/reform-buttons/macro.njk" import reformButton %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+      
+      <p class="lede">{{pageStrapline}}</p>
+
+    </div>
+
+  </div>
+
+  {% markdown %}
+    {% include "./README.md" %}
+  {% endmarkdown %}
+
+</main>
+{% endblock %}

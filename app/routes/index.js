@@ -1,6 +1,7 @@
 const routes = require("express").Router();
 
 
+routes.use("/", require("./patterns"))
 routes.use("/", require("./elements"))
 routes.use("/", require("./components"))
 routes.use("/", require("./pages"))
