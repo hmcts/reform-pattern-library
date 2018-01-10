@@ -1,5 +1,5 @@
-node_modules
-public
+node_modules/
+public/
 .sass-cache
 .tmp/
 dist/
@@ -7,3 +7,5 @@ dist/
 *.js.swp
 .DS_Store
 files
+npm-debug.log
+package-lock.json
