@@ -38,12 +38,12 @@ routes.get("/" + base + "/collapsibles", function (req, res) {
 })
 
 
-routes.get("/" + base + "/progress-list", function (req, res) {
-  res.render(base + "/progress-list/index",
+routes.get("/" + base + "/progress-bar", function (req, res) {
+  res.render(base + "/progress-bar/index",
     data = {
       section : "components",
       sectionName : "Components",
-      pageTitle : "Progress list",
+      pageTitle : "Progress bar",
       pageStrapline: "Show users which stage of the journey they’re at."
     }
   )
