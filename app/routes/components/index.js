@@ -7,8 +7,7 @@ var base = "components";
 routes.get("/" + base, function (req, res) {
   res.render(base + "/index",
     data = {
-      pageTitle : "Components",
-      pageStrapline: "A collection of components for the Reform Programme."
+      pageTitle : "Components"
     }
   )
 })
