@@ -61,12 +61,12 @@ routes.get("/" + base + "/tabs", function (req, res) {
 })
 
 
-routes.get("/" + base + "/add-form-fields", function (req, res) {
-  res.render(base + "/add-form-fields/index",
+routes.get("/" + base + "/add-another", function (req, res) {
+  res.render(base + "/add-another/index",
     data = {
       section : "components",
       sectionName : "Components",
-      pageTitle : "Add form fields",
+      pageTitle : "Add another",
       pageStrapline: "Allow users to add extra form fields for more information."
     }
   )
@@ -90,6 +90,17 @@ routes.get("/" + base + "/dates", function (req, res) {
       sectionName : "Components",
       pageTitle : "Dates",
       pageStrapline: "Allow users to add extra form fields for more information."
+    }
+  )
+})
+
+routes.get("/" + base + "/document-upload", function (req, res) {
+  res.render(base + "/document-upload/index",
+    data = {
+      section : "components",
+      sectionName : "Components",
+      pageTitle : "Document upload",
+      pageStrapline: "Use for citizens to upload documents. Pattern taken from Tax Tribunals reformed service."
     }
   )
 })
