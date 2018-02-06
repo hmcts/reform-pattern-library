@@ -13,25 +13,39 @@ This pattern has been decided.
 
 There are 3 exceptions that can be used if the user need is established.
 
+### Additional headers
+
+Use an additional header if you find a user need for it.
+
+Example from divorce:
 ```example
 
 ```
 
+### Multiple names on one page
+
+Use this pattern to capture multiple names on one page:
+
+Example from divorce:
 ```example
 
 ```
 
+### Capturing titles
+
+Only ask for a title if there’s a business need for your service to do so.
+
+Example from CMC:
 ```example
 
 ```
-
-## When to use this pattern
-
-Use this pattern for all XYZ.
 
 ## Research for this pattern
 
-Maybe a link to some research here with a brief explanation of why we’re making this a pattern.
+When testing the single-field GOV.UK approach users didn’t enter their entire names or missed out middle names.
+This is why we use the multiple-field pattern. 
+
+Hint text should read: ‘including middle names’
 
 ## Related patterns
 

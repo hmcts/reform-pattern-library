@@ -20,7 +20,7 @@ routes.get("/" + base + "/names", function (req, res) {
       section : "patterns",
       sectionName : "Patterns",
       pageTitle : "Names",
-      pageStrapline: "A collection of name patterns."
+      pageStrapline: "Asking users to enter their name."
     }
   )
 })
