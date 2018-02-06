@@ -32,7 +32,7 @@ routes.get("/" + base + "/dates", function (req, res) {
       section : "patterns",
       sectionName : "Patterns",
       pageTitle : "Dates",
-      pageStrapline: "A collection of date patterns."
+      pageStrapline: "Asking users to enter dates."
     }
   )
 })
