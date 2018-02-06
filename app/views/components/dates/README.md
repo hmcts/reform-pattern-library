@@ -1,6 +1,6 @@
-## Agreed pattern
+## Example
 
-This pattern has been decided.
+We generally use the GOV.UK pattern for dates:
 
 ```example
 <h2 class="heading-large">When did you get married?</h2>
@@ -15,8 +15,13 @@ This pattern has been decided.
 
 ## Exceptions
 
-There is 1 exception that can be used if the user need is established.
+### Including information text
 
+You can include more information text if users need it.
+
+Use black text finishing with a full stop, below the H1 question.
+
+Example from CMC:
 ```example
 <div class="grid">
 <div class="column column-two-thirds">
@@ -34,18 +39,14 @@ There is 1 exception that can be used if the user need is established.
 </div>
 ```
 
-## When to use this pattern
+### Including images
 
-Use this pattern for all XYZ.
+You can use an image to show a user where to find the date:
+
+Example from SSCS:
+```example
+```
 
 ## Research for this pattern
 
 Maybe a link to some research here with a brief explanation of why we’re making this a pattern.
-
-## Related patterns
-
-You may also want to use these:
-
-* [Related link](#)
-* [Another related link](#)
-* [Add another link](#)
