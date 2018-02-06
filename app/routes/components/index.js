@@ -73,5 +73,25 @@ routes.get("/" + base + "/add-form-fields", function (req, res) {
   )
 })
 
+routes.get("/" + base + "/names", function (req, res) {
+  res.render(base + "/names/index",
+    data = {
+      section : "components",
+      sectionName : "Components",
+      pageTitle : "Names",
+      pageStrapline: "Allow users to add extra form fields for more information."
+    }
+  )
+})
 
+routes.get("/" + base + "/dates", function (req, res) {
+  res.render(base + "/dates/index",
+    data = {
+      section : "components",
+      sectionName : "Components",
+      pageTitle : "Dates",
+      pageStrapline: "Allow users to add extra form fields for more information."
+    }
+  )
+})
 module.exports = routes;
