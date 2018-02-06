@@ -6,6 +6,7 @@ routes.use("/", require("./elements"))
 routes.use("/", require("./components"))
 routes.use("/", require("./pages"))
 routes.use("/", require("./journeys"))
+routes.use("/", require("./content"))
 
 
 routes.get("/", function (req, res) {
