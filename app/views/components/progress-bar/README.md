@@ -3,18 +3,18 @@
 ```example
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         current: true
       },
       three: {
-        label: "Hearing booked"
+        label: "The court decides"
       },
       four: {
-        label: "Hearing"
+        label: "Divorce finalised"
       }
     })
   }}
@@ -24,18 +24,18 @@
 {% raw %}
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked"
+        label: "The court decides"
       },
       four: {
-        label: "Hearing"
+        label: "Divorce finalised"
       }
     })
   }}
@@ -45,19 +45,19 @@
 ```example
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked",
+        label: "The court decides",
         current: true
       },
       four: {
-        label: "Hearing"
+        label: "Divorce finalised"
       }
     })
   }}
@@ -67,19 +67,19 @@
 {% raw %}
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked",
+        label: "The court decides",
         complete: true
       },
       four: {
-        label: "Hearing"
+        label: "Divorce finalised"
       }
     })
   }}
@@ -89,19 +89,19 @@
 ```example
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked",
+        label: "The court decides",
         complete: true
       },
       four: {
-        label: "Hearing",
+        label: "Divorce finalised",
         current: true
       }
     })
@@ -112,19 +112,19 @@
 {% raw %}
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked",
+        label: "The court decides",
         complete: true
       },
       four: {
-        label: "Hearing",
+        label: "Divorce finalised",
         current: true
       }
     })
@@ -135,19 +135,19 @@
 ```example
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked",
+        label: "The court decides",
         complete: true
       },
       four: {
-        label: "Hearing",
+        label: "Divorce finalised",
         complete: true
       }
     })
@@ -158,19 +158,19 @@
 {% raw %}
   {{ reformProgressList({
       one: {
-        label: "Appeal",
+        label: "You apply",
         complete: true
       },
       two: {
-        label: "DWP response",
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
-        label: "Hearing booked",
+        label: "The court decides",
         complete: true
       },
       four: {
-        label: "Hearing",
+        label: "Divorce finalised",
         complete: true
       }
     })
