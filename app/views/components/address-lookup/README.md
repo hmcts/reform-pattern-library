@@ -6,18 +6,9 @@
 {{ reformAddressLookup() }}
 ```
 
-## When to use this pattern
-
-Use this pattern for all XYZ.
-
 ## Research for this pattern
 
-Maybe a link to some research here with a brief explanation of why we’re making this a pattern.
+This pattern was researched, developed and extensively tested during the [Apply for a Divorce](http://divorce-prototype-print-post.herokuapp.com/respondent/address/postcode) project. When implementing this pattern, referring to the Apply for a Divorce frontend code would be advisable, since it handles cases where a user doesn't have Javascript installed.
 
-## Related patterns
+Username: divorce | Password: access123
 
-You may also want to use these:
-
-* [Related link](#)
-* [Another related link](#)
-* [Add another link](#)
