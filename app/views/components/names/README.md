@@ -4,7 +4,7 @@ This pattern has been decided.
 
 ```example
 <h2 class="heading-large">What is the full name of your client?</h2>
-{{ reformInput(label="First name(s)", id="firstname", hint="Including middle names", name="firstname") }}
+{{ reformInput(label="First name(s)", id="firstname", hint="Include all middle names here", name="firstname") }}
 {{ reformInput(label="Last name(s)", id="lastname", name="lastname") }}
 {{ reformButton("Continue", type="submit") }}
 ```
