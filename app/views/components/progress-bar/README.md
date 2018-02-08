@@ -8,6 +8,48 @@
       },
       two: {
         label: "Your husband/wife responds",
+        current: true
+      },
+      three: {
+        label: "The court decides"
+      },
+      four: {
+        label: "Divorce finalised"
+      }
+    })
+  }}
+```
+
+```nunjucks
+{% raw %}
+  {{ reformProgressList({
+      one: {
+        label: "You apply",
+        complete: true
+      },
+      two: {
+        label: "Your husband/wife responds",
+        complete: true
+      },
+      three: {
+        label: "The court decides"
+      },
+      four: {
+        label: "Divorce finalised"
+      }
+    })
+  }}
+{% endraw %}
+```
+
+```example
+  {{ reformProgressList({
+      one: {
+        label: "You apply",
+        complete: true
+      },
+      two: {
+        label: "Your husband/wife responds",
         complete: true
       },
       three: {
@@ -38,6 +80,98 @@
       },
       four: {
         label: "Divorce finalised"
+      }
+    })
+  }}
+{% endraw %}
+```
+
+```example
+  {{ reformProgressList({
+      one: {
+        label: "You apply",
+        complete: true
+      },
+      two: {
+        label: "Your husband/wife responds",
+        complete: true
+      },
+      three: {
+        label: "The court decides",
+        complete: true
+      },
+      four: {
+        label: "Divorce finalised",
+        current: true
+      }
+    })
+  }}
+```
+
+```nunjucks
+{% raw %}
+  {{ reformProgressList({
+      one: {
+        label: "You apply",
+        complete: true
+      },
+      two: {
+        label: "Your husband/wife responds",
+        complete: true
+      },
+      three: {
+        label: "The court decides",
+        complete: true
+      },
+      four: {
+        label: "Divorce finalised",
+        current: true
+      }
+    })
+  }}
+{% endraw %}
+```
+
+```example
+  {{ reformProgressList({
+      one: {
+        label: "You apply",
+        complete: true
+      },
+      two: {
+        label: "Your husband/wife responds",
+        complete: true
+      },
+      three: {
+        label: "The court decides",
+        complete: true
+      },
+      four: {
+        label: "Divorce finalised",
+        complete: true
+      }
+    })
+  }}
+```
+
+```nunjucks
+{% raw %}
+  {{ reformProgressList({
+      one: {
+        label: "You apply",
+        complete: true
+      },
+      two: {
+        label: "Your husband/wife responds",
+        complete: true
+      },
+      three: {
+        label: "The court decides",
+        complete: true
+      },
+      four: {
+        label: "Divorce finalised",
+        complete: true
       }
     })
   }}
