@@ -19,7 +19,6 @@ routes.get("/" + base + "/address-lookup", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Address lookup",
-      pageStrapline: "Allow a user to find their address by entering their postcode.",
       publishedStatus: "Approved"
     }
   )
