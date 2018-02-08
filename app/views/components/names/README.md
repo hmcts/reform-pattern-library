@@ -5,15 +5,6 @@
 {{ reformButton("Continue", type="submit") }}
 ```
 
-### Additional headers
-
-Use an additional header if you find a user need for it.
-
-Example from divorce:
-```example
-
-```
-
 ### Full names
 
 In some cases, asking for first names and last names seperately is
@@ -35,18 +26,3 @@ Example from divorce:
 {{ reformButton("Continue", type="submit") }}
 ```
 
-### Capturing titles
-
-Only ask for a title if there’s a business need for your service to do so.
-
-Example from CMC:
-```example
-
-```
-
-## Research for this pattern
-
-When testing the single-field GOV.UK approach users didn’t enter their entire names or missed out middle names.
-This is why we use the multiple-field pattern. 
-
-Hint text should read: ‘including middle names’
