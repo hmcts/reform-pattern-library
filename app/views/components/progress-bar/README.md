@@ -1,3 +1,7 @@
+## When to use this pattern
+
+Only use the progress bar pattern on [Start pages](https://divorce-prototype.herokuapp.com/start) and [Done pages](https://divorce-prototype.herokuapp.com/done).
+
 ## Examples
 
 
@@ -44,11 +48,6 @@
   }}
 {% endraw %}
 ```
-
-
-## When to use this pattern
-
-Only use the progress bar pattern on [Start pages](https://divorce-prototype.herokuapp.com/start) and [Done pages](https://divorce-prototype.herokuapp.com/done).
 
 ## How to use this pattern
 
