@@ -91,3 +91,12 @@ $module: "pattern-library";
 
 
 }
+
+  div.header-global #logo{
+    margin: 0 15px;  
+  }
+
+  div.header-global div#logo:hover {
+    border-bottom-width: 0;
+    border: none;
+  }
