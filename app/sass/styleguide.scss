@@ -97,6 +97,5 @@ $module: "pattern-library";
   }
 
   div.header-global div#logo:hover {
-    border-bottom-width: 0;
-    border: none;
+    border-bottom: none !important;
   }
