@@ -46,11 +46,3 @@ When testing the single-field GOV.UK approach users didn’t enter their entire 
 This is why we use the multiple-field pattern. 
 
 Hint text should read: ‘including middle names’
-
-## Related patterns
-
-You may also want to use these:
-
-* [Related link](#)
-* [Another related link](#)
-* [Add another link](#)

@@ -194,10 +194,3 @@ Follow these guidelines for this pattern:
 ## Research for this pattern
 
 In discovery, several services found users needed to know the stage of a service they’re at and how much more they have to do.
-
-## Related patterns
-
-You may also want to use these:
-
-* [Start pages](https://divorce-prototype.herokuapp.com/start)
-* [Done pages](https://divorce-prototype.herokuapp.com/done)
