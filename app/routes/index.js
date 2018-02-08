@@ -11,7 +11,7 @@ routes.use("/", require("./content"))
 routes.get("/", function (req, res) {
   res.render("index",
     data = {
-      pageTitle : "Reform Pattern Library"
+      pageTitle : "Reform pattern library"
     }
   )
 })

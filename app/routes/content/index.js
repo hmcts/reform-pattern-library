@@ -17,7 +17,9 @@ routes.get("/" + base + "/privacy-policy", function (req, res) {
     data = {
       section : "content",
       sectionName : "Content",
-      pageTitle : "Privacy policy - DRAFT"
+      pageTitle : "Privacy policy",
+      publishedStatus : "Draft",
+      usage: "Internal"
     }
   )
 })
@@ -27,7 +29,9 @@ routes.get("/" + base + "/terms-and-conditions", function (req, res) {
     data = {
       section : "content",
       sectionName : "Content",
-      pageTitle : "Terms and conditions - DRAFT"
+      pageTitle : "Terms and conditions",
+      publishedStatus : "Approved",
+      usage: "Internal"
     }
   )
 })
@@ -37,7 +41,9 @@ routes.get("/" + base + "/cookie-policy", function (req, res) {
     data = {
       section : "content",
       sectionName : "Content",
-      pageTitle : "Cookie policy - DRAFT"
+      pageTitle : "Cookie policy",
+      publishedStatus : "Draft",
+      usage: "Internal"
     }
   )
 })

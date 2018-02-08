@@ -1,0 +1,4 @@
+{% if publishedStatus == 'Draft' %}<br /><strong class="phase-tag status draft">Draft</strong>
+{% elseif publishedStatus == 'Approved' %}<br /><strong class="phase-tag status approved">Approved</strong>
+{% endif %}
+{% if usage == 'Internal' %}<strong class="phase-tag status">Internal use only</strong>{% endif %}
