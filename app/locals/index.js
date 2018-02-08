@@ -1,4 +1,4 @@
 module.exports = {
-  service_title : "Reform Pattern Library",
+  service_title : "Reform pattern library",
   asset_path    : "/public/"
 }

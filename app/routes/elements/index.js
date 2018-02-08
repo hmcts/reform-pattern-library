@@ -8,7 +8,7 @@ routes.get("/" + base, function (req, res) {
   res.render(base + "/index",
     data = {
       pageTitle : "Elements",
-      pageStrapline: "A collection of elements for the Reform Programme."
+      pageStrapline: "Use the GOV UK elements for standard form elements.  Some are repeated here as macros for ease of use. Use the beta GDS Design System for additional elements.  The link has been shared with UX designers on the Reform Programme directly."
     }
   )
 })
