@@ -19,7 +19,8 @@ routes.get("/" + base + "/address-lookup", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Address lookup",
-      pageStrapline: "Allow a user to find their address by entering their postcode."
+      pageStrapline: "Allow a user to find their address by entering their postcode.",
+      publishedStatus: "Approved"
     }
   )
 })
@@ -31,7 +32,8 @@ routes.get("/" + base + "/collapsibles", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Collapsibles",
-      pageStrapline: "Allow users to gradually reveal information."
+      pageStrapline: "Allow users to gradually reveal information.",
+      publishedStatus: "Approved"
     }
   )
 })
@@ -43,7 +45,8 @@ routes.get("/" + base + "/progress-bar", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Progress bar",
-      pageStrapline: "Show users which stage of the journey they’re at. Only use this pattern on Start and Done pages."
+      pageStrapline: "Show users which stage of the journey they’re at. Only use this pattern on Start and Done pages.",
+      publishedStatus: "Approved"
     }
   )
 })
@@ -55,7 +58,9 @@ routes.get("/" + base + "/tabs", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Tabs",
-      pageStrapline: "Show users information in adjacent categories."
+      pageStrapline: "Show users information in adjacent categories.",
+      publishedStatus: "Draft",
+      usage: "Internal"
     }
   )
 })
@@ -67,7 +72,8 @@ routes.get("/" + base + "/add-another", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Add another",
-      pageStrapline: "Allow users to add extra form fields for more information."
+      pageStrapline: "Allow users to add extra form fields for more information.",
+      publishedStatus: "Draft"
     }
   )
 })
@@ -77,7 +83,9 @@ routes.get("/" + base + "/names", function (req, res) {
     data = {
       section : "components",
       sectionName : "Components",
-      pageTitle : "Names"
+      pageTitle : "Names",
+      pageStrapline: "Allow users to add extra form fields for more information.",
+      publishedStatus: "Approved"
     }
   )
 })
@@ -87,7 +95,9 @@ routes.get("/" + base + "/dates", function (req, res) {
     data = {
       section : "components",
       sectionName : "Components",
-      pageTitle : "Dates"
+      pageTitle : "Dates",
+      pageStrapline: "Allow users to add extra form fields for more information.",
+      publishedStatus: "Approved"
     }
   )
 })
@@ -98,7 +108,8 @@ routes.get("/" + base + "/document-upload", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Document upload",
-      pageStrapline: "Use for citizens to upload documents. Pattern taken from Tax Tribunals reformed service."
+      pageStrapline: "Use for citizens to upload documents. Pattern taken from Tax Tribunals reformed service.",
+      publishedStatus: "Approved"
     }
   )
 })
