@@ -83,7 +83,6 @@ routes.get("/" + base + "/names", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Names",
-      pageStrapline: "Allow users to add extra form fields for more information.",
       publishedStatus: "Approved"
     }
   )
@@ -95,7 +94,6 @@ routes.get("/" + base + "/dates", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Dates",
-      pageStrapline: "Allow users to add extra form fields for more information.",
       publishedStatus: "Approved"
     }
   )
