@@ -43,7 +43,7 @@ routes.get("/" + base + "/progress-bar", function (req, res) {
       section : "components",
       sectionName : "Components",
       pageTitle : "Progress bar",
-      pageStrapline: "Show users which stage of the journey they’re at."
+      pageStrapline: "Show users which stage of the journey they’re at. Only use this pattern on Start and Done pages."
     }
   )
 })
