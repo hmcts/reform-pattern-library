@@ -15,7 +15,10 @@
 
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+      <h1 class="heading-xlarge">
+        {{pageTitle}}
+        {% include "tags.njk" %}
+      </h1>
 
       <p class="lede">{{pageStrapline}}</p>
 

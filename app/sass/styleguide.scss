@@ -50,6 +50,13 @@ $module: "pattern-library";
     @include core-16;
   }
 
+  .draft {
+    background-color: #f47738;
+  }
+
+  .approved {
+    background-color: #00823B;
+  }
 
   pre {
     @include core-16;
