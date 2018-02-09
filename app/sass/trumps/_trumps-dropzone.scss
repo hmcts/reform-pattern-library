@@ -1,0 +1,57 @@
+
+.dropzone {
+	border: 2px dashed #6f777b;
+	clear:both;
+	margin-bottom: 20px;
+	padding: 15px;
+	pointer-events: none; // Remove at a later date
+	
+	@include media (tablet) {
+		padding: 30px;
+	}
+	
+	&:focus {
+		outline: 3px solid #ffbf47;
+	}
+	
+}
+
+
+.dz-message {
+	text-align: center;
+}
+
+
+.dz-message-icon {
+	background-image: url(/public/images/dropzone/dropzone-arrow.svg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 60px;
+	margin-right: 15px;
+	vertical-align: middle;
+	width: 60px;
+	
+	@include media (tablet) {
+		height: 90px;
+		width: 90px;
+	}	
+	
+	@include media (tablet) {
+		margin-right: 30px;
+	}
+	
+}
+
+
+.dz-message-text {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+
+
+// Don't show standard form input if JavaScript is available
+.js-enabled .dropzone .form-group {
+	display: none;
+}
