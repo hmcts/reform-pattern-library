@@ -1,0 +1,18 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+  
+  <h1 class="heading-xlarge">Start page</h1>
+
+  <p>Some content goes here...</p>
+
+</main>
+{% endblock %}

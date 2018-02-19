@@ -1,0 +1,23 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+  
+  <h1 class="heading-xlarge">This page cannot be found</h1>
+  
+  <p>Please check that you have entered the correct web address, or try:</p>
+
+  <ul class="list list-bullet">
+    <li><a href="#">Service start page</a></li>
+    <li><a href="#">GOV.UK homepage</a></li>
+  </ul>
+
+</main>
+{% endblock %}

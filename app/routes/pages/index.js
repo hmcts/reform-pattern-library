@@ -36,4 +36,26 @@ routes.get("/" + base + "/check-your-answers", function (req, res) {
 })
 
 
+routes.get("/" + base + "/404", function (req, res) {
+  res.render(base + "/404/index",
+    data = {
+      section : "pages",
+      sectionName : "Pages",
+      pageTitle : "This page cannot be found"
+    }
+  )
+})
+
+
+routes.get("/" + base + "/start-page", function (req, res) {
+  res.render(base + "/start-page/index",
+    data = {
+      section : "pages",
+      sectionName : "Pages",
+      pageTitle : "Start page"
+    }
+  )
+})
+
+
 module.exports = routes;
