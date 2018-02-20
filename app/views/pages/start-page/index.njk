@@ -10,9 +10,51 @@
 
   {% include "partials/breadcrumb.njk" ignore missing %}
   
-  <h1 class="heading-xlarge">Start page</h1>
+  <div class="grid-row">
+    
+    <div class="column-two-thirds">
+  
+      <h1 class="heading-xlarge">Service name</h1>
 
-  <p>Some content goes here...</p>
+      <p>Use this service to:</p>
+      
+      <ul class="list list-bullet">
+        <li>do something</li>
+        <li>update your name, address or other details</li>
+        <li>you need to do this in order to do something else</li>
+      </ul>
+      
+      <p>Registering takes around 5 minutes.</p>
+
+      <p><a class="button button-start">Start now</a></p>
+
+      <h2 class="heading-medium">Before you start</h2>
+      
+      <p>You can also <a href="#">register by post</a>.</p>
+
+      <p>The online service is also available in <A href="#">Welsh (Cymraeg)</a>.</p>
+
+      <p>You can’t register for this service if you’re in the <abbr title="United Kingdom">UK</abbr> illegally.</p>
+
+    </div>
+
+    <div class="column-third">
+
+      <div class="related-items">
+        
+        <h3 class="heading-medium">Subsection</h3>
+        
+        <ul class="list">
+          <li><a href="#">Related link</a></li>
+          <li><a href="#">Related link</a></li>
+          <li><a class="bold-xsmall" href="#">More</a></li>
+        </ul>
+        
+      </div>
+      
+    </div>
+    
+  </div>
 
 </main>
 {% endblock %}
