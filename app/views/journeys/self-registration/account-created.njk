@@ -1,0 +1,36 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        {{pageTitle}}
+        {% include "tags.njk" %}
+      </h1>
+
+      <form method="get" name="account_created" action="sign-in" id="account_created">
+        <p>You can now sign in to your account.</p>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+</div>
+
+</main>
+{% endblock %}
