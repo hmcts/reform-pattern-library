@@ -1,0 +1,156 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {{pageTitle}}
+        {% include "tags.njk" %}
+      </h1>
+
+      <p>Citizen self registration follows the following structure.</p>
+
+      <div class="task-list" data-js="task-list">
+
+        <ol class="task-list__list">
+
+          <li class="task-list__item">
+
+            <div class="task-list__step" id="start-page">
+
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="1">1. </span>Sign in<span class="task-list__toggle" aria-hidden="true"> Show</span></h2>
+              </div>
+
+              <div class="task-list__panel js-hidden">
+
+                <p>All services will land on this page. The user will have to select to create an account if they don't have one.</p>
+
+                <p>The split design approach gives improved visibility to the create account section</p>
+
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="self-registration/sign-in">View example</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task-list__item">
+
+            <div class="task-list__step" id="screening-questions">
+
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="2">2. </span>Create account<span class="task-list__toggle"> Show</span></h2>
+              </div>
+
+              <div class="task-list__panel js-hidden">
+
+                <p>This is the first page of the create account journey.</p> 
+                <p>Selecting continue takes the user to the check your email page.</p>
+
+
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="self-registration/create-account">View example</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task-list__item">
+
+            <div class="task-list__step" id="questions">
+
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="3">3. </span>Check your email<span class="task-list__toggle"> Show</span></h2>
+              </div>
+
+              <div class="task-list__panel js-hidden">
+
+                <p>This page informs the user that they will receive an email so they can verify their email address. </p>
+                <p>Selecting verify email link takes the user to the create a password page.</p>
+               
+
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="self-registration/verify-email">Check your email example</a></li>
+                  <li><a href="self-registration/verify-email-example">verification email example</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task-list__item">
+
+            <div class="task-list__step" id="check-your-answers-page">
+
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="4">4. </span>Create a password<span class="task-list__toggle"> Show</span></h2>
+              </div>
+
+              <div class="task-list__panel js-hidden">
+
+                <p>When the user selects the link in the email they are taken to the create a password page</p>
+                <p>On entering a valid password continue takes the use to the account activated page</p>
+
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="self-registration/create-password">View example</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task-list__item">
+
+            <div class="task-list__step" id="payment">
+
+              <div class="task-list__header">
+                <h2 class="task-list__title"><span class="task-list__number" data-number="5">5. </span>Account created<span class="task-list__toggle"> Show</span></h2>
+              </div>
+
+              <div class="task-list__panel js-hidden">
+
+                <p>The user has successfully created an account.</p>
+                <p>Selecting continue takes the user to the sign in page where they can sign into the service.</p>
+
+                <ul class="task-list__panel-links task-list__panel-links--required">
+                  <li><a href="self-registration/account-created">View example</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

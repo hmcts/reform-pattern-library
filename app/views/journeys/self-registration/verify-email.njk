@@ -1,0 +1,35 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        {{pageTitle}}
+        {% include "tags.njk" %}
+      </h1>
+      <p>We've sent you an email. Follow the instructions to finish creating your account.</p>
+
+      <h2 class="heading-medium">Can't see the email?</h2>
+      <p>It can take a few minutes to arrive. Check your junk mail if you can’t see it in your inbox. </p>
+      <p>If you still can't see it <a href="create-account">enter your details again</a>.</p>
+
+
+
+    </div>
+  </div>
+
+</div>
+
+</main>
+{% endblock %}

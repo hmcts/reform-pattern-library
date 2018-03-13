@@ -1,0 +1,53 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+
+  <div class="grid-row">
+
+
+    <h1 class="heading-large">
+      {{pageTitle}}
+      {% include "tags.njk" %}
+    </h1>
+
+    <div class="column-half col1">
+      <h2 class="heading-medium">
+        Sign in
+      </h2>
+      <form  action="#" method="get">
+        <div class='form-group'>
+          <label for="email_address" class="form-label" >Email address</label>
+          <input name="email_address" id="email_address" class="form-control form-control-3-4" type="email" />
+        </div>
+        <div class='form-group'>
+          <label for="password" class="form-label">Password</label>
+          <input name="password" id="password" class="form-control form-control-3-4" type="password"/>
+        </div>
+        <p><a href="#">Forgotten password?</a></p>
+        <div class='form-group'>
+          <input type="submit" name="commit" value="Sign in" class="btn button"/>
+        </div>
+      </form>
+    </div>
+    
+    <div class="column-half col2">
+     <h2 class="heading-medium">
+      Create an account
+    </h2>
+     <p>You need to <a href="create-account" role="button">create an account</a> to use this service.</p>
+   </div>
+ 
+ </div>
+
+</div>
+
+</main>
+{% endblock %}
