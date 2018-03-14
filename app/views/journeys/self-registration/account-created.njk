@@ -12,25 +12,18 @@
 
   <div class="grid-row">
 
+    <!-- account created -->
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">
-        {{pageTitle}}
-        {% include "tags.njk" %}
-      </h1>
-
-      <form method="get" name="account_created" action="sign-in" id="account_created">
-        <p>You can now sign in to your account.</p>
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
-      </form>
-
-
+      <h1 class="heading-large">Account created</h1>
+      
+      <p>You can now sign in to your account.</p>
+      
+      <p><a class="button" href="/journeys/self-registration/sign-in" role="button">Continue</a></p>
+    
     </div>
-  </div>
 
-</div>
+  </div>
 
 </main>
 {% endblock %}
