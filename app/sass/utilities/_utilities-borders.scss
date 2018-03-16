@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #BORDERS
+   ========================================================================== */
+
+/**
+ * This is a nice to have visual separation and not vital for all browsers.
+ */
+
+.u--border--right {
+	
+	@include media(tablet) {		
+		box-shadow: inset -4px 0 0 $border-colour; // IE9+
+	}
+	
+}

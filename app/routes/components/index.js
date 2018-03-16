@@ -1,4 +1,7 @@
-const routes = require("express").Router();
+const routes = require("express").Router()
+
+const multer = require("multer")
+const upload = multer({ dest:"uploads/"})
 
 
 var base = "components";
@@ -110,4 +113,9 @@ routes.get("/" + base + "/document-upload", function (req, res) {
     }
   )
 })
+
+routes.post("/upload", upload.single("file"), function(req, res, next) {
+  return res.status( 200 ).send(req.file);
+});
+
 module.exports = routes;

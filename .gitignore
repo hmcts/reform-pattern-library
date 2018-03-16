@@ -1,4 +1,8 @@
 node_modules/
+
+uploads/*
+!uploads/.gitkeep
+
 public/
 .sass-cache
 .tmp/

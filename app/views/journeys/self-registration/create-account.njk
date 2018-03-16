@@ -1,5 +1,7 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
+{% from "macros/reform-inputs/macro.njk" import reformInput %}
+{% from "macros/reform-buttons/macro.njk" import reformButton %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -12,55 +14,68 @@
 
   <div class="grid-row">
 
+    <!-- create an account -->
+    <div class="column-one-half  u--border--right">
 
-    <h1 class="heading-large">
-      {{pageTitle}}
-      {% include "tags.njk" %}
-    </h1>
+      <h1 class="heading-large">Create an account</h1>
+      
+      <form class="form" method="get" action="verify-email" novalidate>
+        
+        <div class="form-group">
+          {{reformInput(
+            label="First name",
+            id="first-name",
+            name="firstName",
+            classes={
+              label: "form-label",
+              input: "form-control-3-4"
+            }
+          )}}
+        </div>
+        
+        <div class="form-group">
+          {{reformInput(
+            label="Last name",
+            id="last-name",
+            name="lastName",
+            classes={
+              label: "form-label",
+              input: "form-control-3-4"
+            }
+          )}}
+        </div>
+        
+        <div class="form-group">
+          {{reformInput(
+            label="Email address",
+            id="email-address",
+            name="emailAddress",
+            type="email",
+            classes={
+              label: "form-label",
+              input: "form-control-3-4"
+            }
+          )}}
+        </div>
+        
+        <p>Read our <a href="/content/privacy-policy">privacy policy</a> and <a href="/content/terms-and-conditions">terms and conditions</a>.</p>
+        
+        {{reformButton("Continue")}}
+        
+      </form>
+    
+    </div>    
+    
+    <!-- sign in -->
+    <div class="column-one-half">
+      
+      <h2 class="heading-large">Sign in</h2>
+      
+      <p><a href="/journeys/self-registration/sign-in">Sign in to your account</a></p>
+      
+    </div>
 
-    <div class="column-half col1">
-      <h2 class="heading-medium">
-       Create an account
-     </h2>
-
-     <form method="get" name="create_account" action="verify-email" id="create_account">
-      <div class="form-group">
-        <label class="form-label" for="first_name">
-          First name
-        </label>
-        <input name="first_name" id="first_name" class="form-control form-control-3-4">
-      </div>
-      <div class="form-group ">
-        <label class="form-label" for="last_name">
-          Last name
-        </label>
-        <input name="last_name" id="last_name" class="form-control form-control-3-4">
-      </div>
-      <div class="form-group ">
-        <label class="form-label" for="email_address">
-          Email address
-        </label>
-        <input name="email_address" id="email_address" class="form-control form-control-3-4">
-      </div>
-      <p>Read our <a href="#"">privacy policy</a> and <a href="#">terms and conditions</a>.</p>
-      <fieldset>
-       <div class="form-group">
-        <input type="submit" class="button" value="Continue">
-      </div>
-    </fieldset>
-  </form>
-</div>
-<div class="column-half col2">
-  <h2 class="heading-medium">
-    Sign in
-  </h2>
-  <p><a href="sign-in" role="button">Sign in to your account.</a></p>
-  <p></p>
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </main>
 {% endblock %}

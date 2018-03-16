@@ -6,6 +6,9 @@ const nunjucks    = require("nunjucks")
 const markdown    = require("nunjucks-markdown")
 const marked      = require("marked")
 
+const multer      = require("multer")
+const upload      = multer({dest:'uploads/'})
+
 const IS_HEROKU = process.env.hasOwnProperty('IS_HEROKU')
 
 const routes = require("./app/routes")

@@ -1,5 +1,7 @@
 {% set title = pageTitle %}
 {% extends "layout.njk" %}
+{% from "macros/reform-inputs/macro.njk" import reformInput %}
+{% from "macros/reform-buttons/macro.njk" import reformButton %}
 
 {% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
 
@@ -12,42 +14,59 @@
 
   <div class="grid-row">
 
+    <!-- sign in -->
+    <div class="column-one-half  u--border--right">
 
-    <h1 class="heading-large">
-      {{pageTitle}}
-      {% include "tags.njk" %}
-    </h1>
-
-    <div class="column-half col1">
-      <h2 class="heading-medium">
-        Sign in
-      </h2>
-      <form  action="#" method="get">
-        <div class='form-group'>
-          <label for="email_address" class="form-label" >Email address</label>
-          <input name="email_address" id="email_address" class="form-control form-control-3-4" type="email" />
+      <h1 class="heading-large">Sign in</h1>
+      
+      <form class="form" action="post" novalidate>
+        
+        <div class="form-group">
+          {{reformInput(
+            label="Email address",
+            id="email-address",
+            name="emailAddress",
+            type="email",
+            classes={
+              label: "form-label",
+              input: "form-control-3-4"
+            }
+          )}}
         </div>
-        <div class='form-group'>
-          <label for="password" class="form-label">Password</label>
-          <input name="password" id="password" class="form-control form-control-3-4" type="password"/>
+        
+        <div class="form-group">
+          {{reformInput(
+            label="Password",
+            id="password",
+            name="password",
+            type="password",
+            classes={
+              label: "form-label",
+              input: "form-control-3-4"
+            }
+          )}}
         </div>
-        <p><a href="#">Forgotten password?</a></p>
-        <div class='form-group'>
-          <input type="submit" name="commit" value="Sign in" class="btn button"/>
+        
+        <div class="form-group form-group-related">
+          {{reformButton("Sign in")}}
         </div>
+        
+        <p><a href="#">Forgotten your password?</a></p>
+        
       </form>
-    </div>
     
-    <div class="column-half col2">
-     <h2 class="heading-medium">
-      Create an account
-    </h2>
-     <p>You need to <a href="create-account" role="button">create an account</a> to use this service.</p>
-   </div>
- 
- </div>
+    </div>    
+    
+    <!-- create an account -->
+    <div class="column-one-half">
+      
+      <h2 class="heading-large">Create an account</h2>
+      
+      <p>You need to <a href="/journeys/self-registration/create-account">create an account</a> to use this service.</p>
+      
+    </div>
 
-</div>
+  </div>
 
 </main>
 {% endblock %}

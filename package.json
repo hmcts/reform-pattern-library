@@ -39,7 +39,8 @@
     "nunjucks": "git+https://git@github.com/gonogo/nunjucks.git",
     "nunjucks-markdown": "^2.0.1",
     "require-dir": "^0.3.2",
-    "run-sequence": "^2.2.0"
+    "run-sequence": "^2.2.0",
+    "multer": "^1.1.0"
   },
   "scripts": {
     "start": "gulp develop",

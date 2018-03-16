@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #UPLOADS
+   ========================================================================== */
+
+/**
+ * This is still WIP and has been rushed for demo purposes. [Trevor Saint]
+ */
+
+.c-uploads {
+  border-top: 1px solid $border-colour;
+}
+
+
+.c-uploads-button {
+	background-color: transparent;
+	border: 0 none;
+	color: $link-colour;
+	cursor: pointer;
+  font-size: inherit;
+	padding: 0;	
+	text-decoration: underline;
+
+	&:hover {
+		color: $link-hover-colour;
+	}
+
+}
+
+
+.c-uploads-item {
+	border-bottom: 1px solid $border-colour;
+	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.c-uploads-item__filename {
+	padding-right: 10px;
+}
+
+
+.c-uploads-empty {
+	margin: 0;
+}
