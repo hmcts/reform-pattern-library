@@ -10,6 +10,7 @@
   <p>You can also upload any other documents that you want to send to the court.</p>
   
   <p>
+  
     <details>
 
       <summary><span class="summary">How to take the picture</span></summary>
@@ -32,41 +33,37 @@
       </div>
 
     </details>
+    
   </p>
 
   <p>The image must be of the entire document and has to be readable by court staff. 
   You can upload a jpg, bmp, png or PDF (maximum file size 10MB).</p>  
   
-  <div class="dropzone" tabindex="0">
-  
-    <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
-      
-      <div class="dz-message">          
-        <div class="dz-message-icon"></div>      
-        <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
-      </div>    
-      
-      <div class="form-group">
-        <label class="form-label" for="file-input">Upload a file</label>
-        <input type="file" id="file-input" multiple>
-      </div>
-      
-    </form>
+  <form class="dropzone" method="post" action="/upload" id="upload-widget" tabindex="0">
     
-  </div>
+    <div class="dz-message">          
+      <div class="dz-message-icon"></div>      
+      <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
+    </div>    
+    
+    <div class="form-group">
+      <label class="form-label" for="file-input">Upload a file</label>
+      <input type="file" id="file-input" multiple>
+    </div>
+    
+  </form>
   
-  <table>
-    <thead>
-      <tr>
-        <th>Uploaded files</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>No files uploaded</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <h2 class="heading-small" id="uploads">Uploaded files</h2>
+  
+  <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+
+    <div class="c-uploads-item">
+      <p class="c-uploads-empty">No files uploaded</p>
+    </div>
+  
+  </div>
+
   
   <p>
   

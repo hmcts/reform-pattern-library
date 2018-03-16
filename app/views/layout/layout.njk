@@ -1,6 +1,9 @@
 {% extends "govuk_template.html" %}
 
-{% block head %}{% include "stylesheets.njk" %}{% endblock %}
+{% block head %}
+  {% include "stylesheets.njk" %}
+  <meta name="csrf-token" content="XYZ123">
+{% endblock %}
 
 {% block cookie_message %}
   <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
