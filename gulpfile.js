@@ -20,6 +20,7 @@ gulp.task("build", function() {
 
 // develop
 gulp.task("develop", [
+  "build",
   "serve",
   "watch"
 ])

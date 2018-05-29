@@ -16,7 +16,6 @@ gulp.task("browser-sync", function() {
   browserSync.init(null, {
     proxy: "http://localhost:3000",
     files: ["public/**/*.*"],
-    browser: "firefox",
     notify: false,
     port: 3001
   })
