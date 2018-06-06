@@ -1,0 +1,27 @@
+{% set title = pageTitle %}
+{% extends "layout.njk" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main class="pattern-library" id="content" role="main">
+
+  {% include "partials/phase_banner.njk" ignore missing %}
+
+  {% include "partials/breadcrumb.njk" ignore missing %}
+  
+ <div class="column-two-thirds"> 
+  <h1 class="heading-xlarge">There is a problem with this service</h1>
+  
+<p>The service team is trying to fix a fault. Please try again later on. </p>
+<p>
+We have not saved your answers. When the service is available, you will have to start again.
+
+</p>
+<p>
+Contact the Tax Credit Helpline if you need to make changes to your claim or speak to someone about your tax credits."
+
+</p>
+</div>  
+</main>
+{% endblock %}

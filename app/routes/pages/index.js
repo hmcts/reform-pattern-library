@@ -57,5 +57,23 @@ routes.get("/" + base + "/start-page", function (req, res) {
   )
 })
 
+routes.get("/" + base + "/shutter-planned", function (req, res) {
+  res.render(base + "/shutter-planned/index",
+    data = {
+      section : "pages",
+      sectionName : "Pages",
+      pageTitle : "Shutter - planned outage page"
+    }
+  )
+})
 
+routes.get("/" + base + "/shutter-unplanned", function (req, res) {
+  res.render(base + "/shutter-unplanned/index",
+    data = {
+      section : "pages",
+      sectionName : "Pages",
+      pageTitle : "Shutter - unplanned outage page"
+    }
+  )
+})
 module.exports = routes;
