@@ -1,6 +1,34 @@
 @import "elements/helpers";
 @import "frontend-toolkit";
 
+
+/*
+Notification summary
+*/
+
+.notification-summary {
+  border: 5px solid $govuk-blue;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 15px 15px;
+}
+
+.notification-summary__heading {
+  @include bold-24;
+  margin-bottom: 20px;
+}
+
+.notification-summary__content {
+  @include core-16;
+  max-width: 38em;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
 /*
 Pattern library
 */
