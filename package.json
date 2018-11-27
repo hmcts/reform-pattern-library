@@ -10,7 +10,7 @@
   "private": "true",
   "license": "MIT",
   "engines": {
-    "node": "8.6.0",
+    "node": ">=8.6.0",
     "npm": "5.5.1"
   },
   "dependencies": {
@@ -43,6 +43,7 @@
     "multer": "^1.1.0"
   },
   "scripts": {
+    "test": "echo",
     "start": "gulp develop",
     "heroku-postbuild": "gulp build"
   },
