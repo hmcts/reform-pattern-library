@@ -33,7 +33,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "heroku-ssl-redirect": "0.0.4",
+    "heroku-ssl-redirect": "0.1.1",
     "marked": "^0.3.6",
     "node-sass": "^4.5.3",
     "nunjucks": "git+https://git@github.com/gonogo/nunjucks.git",
