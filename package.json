@@ -34,7 +34,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "heroku-ssl-redirect": "0.0.4",
-    "marked": "^0.3.6",
+    "marked": "^0.8.2",
     "node-sass": "^4.5.3",
     "nunjucks": "git+https://git@github.com/gonogo/nunjucks.git",
     "nunjucks-markdown": "^2.0.1",
